@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sarah Pacini — бутик итальянской одежды в Екатеринбурге</title>
+<meta name="description" content="Sarah Pacini, TRANSIT, Европейская культура. Примерка в бутике, доставка по России. Трикотаж, палантины, жакеты, брюки.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fff;--bg-soft:#f7f5f2;--bg-warm:#f1ebe3;
+  --ink:#141210;--ink-soft:#3d3a36;--mute:#8a8279;--line:#e7e1d8;
+  --accent:#9a6b4f;--accent-hover:#7d523a;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --radius:16px;--shadow:0 18px 50px -12px rgba(20,18,16,.12);
+  --transition:.3s cubic-bezier(.25,.8,.25,1);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;font-size:15px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input,select,textarea{font:inherit;color:inherit}
+ul{list-style:none}
+.wrap{max-width:1320px;margin:0 auto;padding:0 28px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.01em}
+.eyebrow{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+
+/* КНОПКИ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 30px;border-radius:999px;font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;transition:var(--transition);white-space:nowrap;border:1.5px solid transparent}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--accent)}
+.btn-outline{border-color:var(--ink);color:var(--ink)}
+.btn-outline:hover{background:var(--ink);color:#fff}
+.btn-soft{background:var(--bg-soft);color:var(--ink)}
+.btn-soft:hover{background:var(--bg-warm)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--ink)}
+.btn-sm{padding:10px 20px;font-size:11px}
+.btn-block{width:100%}
+
+/* ШАПКА */
+.topbar{background:var(--ink);color:#d8d0c6;font-size:12px;letter-spacing:.03em}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:38px}
+.topbar a:hover{color:#fff}
+.topbar .tb-links{display:flex;gap:24px}
+.topbar .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#7bc99a;margin-right:8px}
+header.site{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.hd{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;min-height:76px}
+.hd-left{display:flex;align-items:center;gap:8px}
+.hd-right{display:flex;align-items:center;justify-content:flex-end;gap:4px}
+.logo{text-align:center;line-height:1}
+.logo .l1{font-family:var(--serif);font-size:26px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+.logo .l2{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin-top:6px}
+.hd-phone{display:flex;flex-direction:column;align-items:flex-end;line-height:1.15;margin-right:12px}
+.hd-phone a{font-weight:600;font-size:14.5px}
+.hd-phone small{color:var(--mute);font-size:10.5px}
+.icon-btn{position:relative;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;transition:var(--transition)}
+.icon-btn:hover{background:var(--bg-soft)}
+.icon-btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.badge{position:absolute;top:3px;right:2px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:var(--accent);color:#fff;font-size:10px;font-weight:700;display:grid;place-items:center}
+.badge:empty,.badge[data-n="0"]{display:none}
+.burger{display:none}
+nav.main{border-top:1px solid var(--line)}
+.nav-list{display:flex;justify-content:center;gap:2px;flex-wrap:wrap}
+.nav-item{position:relative}
+.nav-item>a{display:block;padding:14px 13px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:var(--transition);white-space:nowrap}
+.nav-item>a:hover,.nav-item:hover>a{color:var(--accent)}
+.nav-item.sale>a{color:#b23a3a}
+.has-sub>a::after{content:"";display:inline-block;width:4px;height:4px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);margin-left:7px;opacity:.5}
+.sub{position:absolute;left:50%;top:100%;transform:translate(-50%,10px);min-width:250px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:8px;opacity:0;visibility:hidden;transition:var(--transition);z-index:5}
+.nav-item:hover .sub,.nav-item:focus-within .sub{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.sub a{display:block;padding:9px 14px;border-radius:8px;font-size:13.5px;color:var(--ink-soft)}
+.sub a:hover{background:var(--bg-soft);color:var(--accent)}
+.sub a.head{font-weight:700;color:var(--ink)}
+
+/* ПАНЕЛЬ ПОИСКА */
+.search-panel{background:#fff;border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .4s ease}
+.search-panel.open{max-height:600px}
+.sp-in{padding:28px 0 32px}
+.sp-title{font-family:var(--serif);font-size:26px;margin-bottom:20px}
+.sp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fld label{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:6px;font-weight:600}
+.fld input,.fld select,.fld textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg-soft);transition:var(--transition)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--accent);background:#fff;outline:0}
+.pr{display:flex;gap:8px}
+.sp-actions{display:flex;gap:10px;margin-top:22px;justify-content:flex-end}
+
+/* HERO */
+.hero{position:relative;background:var(--ink);overflow:hidden}
+.slides{position:relative;aspect-ratio:16/9;max-height:78vh;min-height:320px;width:100%}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;pointer-events:none}
+.slide.on{opacity:1;pointer-events:auto;z-index:2}
+.slide img{width:100%;height:100%;object-fit:cover}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,9,8,.6) 0%,rgba(10,9,8,0) 45%)}
+.cap{position:absolute;z-index:3;left:max(28px,calc((100vw - 1264px)/2));bottom:60px;color:#fff;max-width:560px}
+.cap .eyebrow{color:#e8d5c4;margin-bottom:10px}
+.cap h2{font-family:var(--serif);font-size:clamp(34px,4.8vw,62px);line-height:1.02;font-weight:400;margin-bottom:22px}
+.hero-nav{position:absolute;z-index:4;right:max(28px,calc((100vw - 1264px)/2));bottom:60px;display:flex;gap:10px}
+.hero-nav button{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.14);backdrop-filter:blur(8px);color:#fff;display:grid;place-items:center;transition:var(--transition);border:1px solid rgba(255,255,255,.3)}
+.hero-nav button:hover{background:#fff;color:var(--ink)}
+.hero-nav svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8}
+.dots{position:absolute;z-index:4;left:50%;bottom:22px;transform:translateX(-50%);display:flex;gap:8px}
+.dots button{width:28px;height:2px;background:rgba(255,255,255,.35);border-radius:2px;transition:var(--transition)}
+.dots button.on{background:#fff;width:44px}
+
+/* ПРЕИМУЩЕСТВА */
+.benefits{background:var(--bg-soft);border-bottom:1px solid var(--line)}
+.ben-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.ben{display:flex;gap:14px;align-items:center;padding:24px 20px;border-right:1px solid var(--line)}
+.ben:last-child{border-right:0}
+.ben svg{flex:none;width:30px;height:30px;stroke:var(--accent);fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.ben b{display:block;font-size:13.5px;line-height:1.25}
+.ben span{font-size:12.5px;color:var(--mute)}
+
+/* СЕКЦИИ */
+section{padding:88px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,3.8vw,52px);line-height:1.04}
+.sec-head p{color:var(--mute);max-width:520px;margin-top:12px;font-size:14.5px}
+
+/* ХЛЕБНЫЕ КРОШКИ */
+.breadcrumbs{padding:24px 0 0;font-size:13px;color:var(--mute);display:flex;flex-wrap:wrap;gap:4px}
+.breadcrumbs a{color:var(--ink-soft);transition:var(--transition)}
+.breadcrumbs a:hover{color:var(--accent)}
+.breadcrumbs span{color:var(--mute);margin:0 6px}
+
+/* КАТЕГОРИИ (главная) */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:3/4;background:var(--bg-warm);display:block}
+.cat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s var(--transition)}
+.cat:hover img{transform:scale(1.06)}
+.cat::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,9,8,.72),rgba(10,9,8,0) 55%)}
+.cat div{position:absolute;z-index:2;left:22px;right:22px;bottom:22px;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.cat h3{font-family:var(--serif);font-weight:400;font-size:26px}
+.cat span{width:36px;height:36px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;transition:var(--transition)}
+.cat:hover span{background:var(--accent);color:#fff;transform:rotate(-45deg)}
+
+/* УВЕДОМЛЕНИЕ */
+.notice{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:24px 28px;margin-bottom:36px;display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.notice p{max-width:820px;font-size:14.5px;color:var(--ink-soft)}
+.notice p b{color:var(--ink)}
+
+/* КАТАЛОГ */
+.cat-layout{display:grid;grid-template-columns:260px 1fr;gap:44px;padding:32px 0 88px}
+.cat-sidebar{position:sticky;top:100px;align-self:start}
+.filter-block{border-bottom:1px solid var(--line);padding:20px 0}
+.filter-block:first-child{padding-top:0}
+.filter-block h4{font-family:var(--sans);font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px;color:var(--ink);font-weight:700}
+.filter-block a,.filter-block label{display:flex;align-items:center;gap:8px;padding:6px 0;font-size:14px;cursor:pointer;color:var(--ink-soft);transition:var(--transition)}
+.filter-block a:hover,.filter-block label:hover{color:var(--accent)}
+.filter-block a.on{color:var(--accent);font-weight:600}
+.price-range{display:flex;gap:8px;margin-bottom:8px}
+.price-range input{width:50%;padding:8px 10px;border:1.5px solid var(--line);border-radius:8px;font-size:13px;background:#fff}
+.cat-toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px;flex-wrap:wrap}
+.cat-toolbar .count{font-size:13.5px;color:var(--mute)}
+.cat-toolbar select{padding:10px 16px;border:1.5px solid var(--line);border-radius:999px;background:#fff;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px 22px}
+.card{position:relative;display:flex;flex-direction:column}
+.ph{position:relative;aspect-ratio:3/4;border-radius:var(--radius);overflow:hidden;background:var(--bg-warm);cursor:pointer}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--transition)}
+.card:hover .ph img{transform:scale(1.05)}
+.ph-fallback{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:48px;color:#c9b8a8;letter-spacing:.1em}
+.tags{position:absolute;top:12px;left:12px;display:flex;gap:6px;z-index:2}
+.tag{padding:5px 12px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:#fff;color:var(--ink)}
+.tag.new{background:var(--ink);color:#fff}
+.tag.sale{background:#b23a3a;color:#fff}
+.acts{position:absolute;top:10px;right:10px;display:flex;flex-direction:column;gap:8px;z-index:2;opacity:0;transform:translateX(8px);transition:var(--transition)}
+.card:hover .acts,.acts:focus-within{opacity:1;transform:none}
+.acts button{width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.1);transition:var(--transition)}
+.acts button:hover,.acts button.on{background:var(--ink);color:#fff}
+.acts svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.add-row{position:absolute;left:12px;right:12px;bottom:12px;z-index:2;transform:translateY(16px);opacity:0;transition:var(--transition)}
+.card:hover .add-row,.add-row:focus-within{transform:none;opacity:1}
+.info{padding:14px 2px 0;display:flex;flex-direction:column;gap:4px;flex:1}
+.brand{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.info h3{font-family:var(--sans);font-size:14px;font-weight:500;line-height:1.4;color:var(--ink)}
+.info h3 a:hover{color:var(--accent)}
+.price{margin-top:auto;padding-top:6px;font-size:17px;font-weight:600}
+.price small{font-weight:400;color:var(--mute);font-size:12px}
+.price.rq{font-size:13.5px;font-weight:500;color:var(--ink-soft)}
+.empty{grid-column:1/-1;text-align:center;padding:70px 20px;color:var(--mute)}
+
+/* ПАГИНАЦИЯ */
+.pagination{display:flex;justify-content:center;gap:6px;margin-top:48px;flex-wrap:wrap}
+.pagination button{min-width:40px;height:40px;padding:0 12px;border:1.5px solid var(--line);border-radius:8px;background:#fff;font-size:14px;font-weight:500;display:grid;place-items:center;transition:var(--transition)}
+.pagination button:hover:not(:disabled){border-color:var(--ink)}
+.pagination button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pagination button:disabled{opacity:.35;cursor:not-allowed}
+
+/* СТРАНИЦА ТОВАРА */
+.product-layout{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;padding:32px 0 88px}
+.gallery{position:sticky;top:100px;align-self:start}
+.gallery-main{aspect-ratio:3/4;border-radius:var(--radius);overflow:hidden;background:var(--bg-warm);margin-bottom:12px}
+.gallery-main img{width:100%;height:100%;object-fit:cover}
+.gallery-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.gallery-thumbs img{aspect-ratio:1;object-fit:cover;border-radius:8px;cursor:pointer;opacity:.55;transition:var(--transition)}
+.gallery-thumbs img.on,.gallery-thumbs img:hover{opacity:1}
+.product-info .brand{margin-bottom:8px}
+.product-info h1{font-family:var(--serif);font-size:clamp(28px,3vw,40px);line-height:1.1;margin-bottom:16px}
+.product-price{font-size:26px;font-weight:600;margin:22px 0}
+.product-price small{font-size:14px;color:var(--mute);font-weight:400}
+.sizes-label{display:flex;justify-content:space-between;font-size:12.5px;color:var(--mute);margin-bottom:10px}
+.sizes-label a{color:var(--accent);font-weight:600}
+.sizes{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.size-btn{min-width:48px;height:46px;padding:0 14px;border:1.5px solid var(--line);border-radius:8px;font-size:13px;font-weight:600;background:#fff;transition:var(--transition)}
+.size-btn:hover{border-color:var(--ink)}
+.size-btn.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.size-btn:disabled{opacity:.35;text-decoration:line-through;cursor:not-allowed}
+.product-actions{display:flex;gap:10px;margin:24px 0;flex-wrap:wrap}
+.product-actions .btn{flex:1;min-width:160px}
+.accordion{border-top:1px solid var(--line);margin-top:12px}
+.accordion details{border-bottom:1px solid var(--line)}
+.accordion summary{padding:18px 0;cursor:pointer;font-weight:600;font-size:14px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.accordion summary::-webkit-details-marker{display:none}
+.accordion summary::after{content:"+";font-size:20px;color:var(--mute)}
+.accordion details[open] summary::after{content:"–"}
+.acc-body{padding-bottom:20px;font-size:14px;color:var(--ink-soft);line-height:1.7}
+.specs div{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.specs span{color:var(--mute)}
+.specs div:last-child{border-bottom:0}
+
+/* КОРЗИНА */
+.cart-layout{display:grid;grid-template-columns:1fr 380px;gap:44px;padding:32px 0 88px;align-items:start}
+.cart-table{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.cart-row{display:grid;grid-template-columns:96px 1fr auto auto;gap:20px;padding:20px;border-bottom:1px solid var(--line);align-items:center}
+.cart-row:last-child{border-bottom:0}
+.cart-row img{width:96px;height:120px;object-fit:cover;border-radius:10px;background:var(--bg-warm)}
+.cart-row h4{font-family:var(--sans);font-size:14px;font-weight:500;line-height:1.3;margin-bottom:4px}
+.cart-row .art{font-size:12px;color:var(--mute);margin-bottom:10px}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
+.qty button{width:32px;height:32px;font-size:17px;line-height:1}
+.qty button:hover{background:var(--bg-soft)}
+.qty span{min-width:28px;text-align:center;font-weight:600;font-size:13.5px}
+.cart-summary{background:var(--bg-soft);border-radius:var(--radius);padding:28px;position:sticky;top:100px}
+.cart-summary h3{font-family:var(--serif);font-size:24px;margin-bottom:20px}
+.sum-line{display:flex;justify-content:space-between;padding:8px 0;font-size:14px;color:var(--ink-soft)}
+.sum-line.total{font-size:19px;font-weight:600;color:var(--ink);padding-top:16px;border-top:1px solid var(--line);margin-top:12px;margin-bottom:20px}
+.cart-empty{text-align:center;padding:80px 20px;background:#fff;border-radius:var(--radius);border:1px solid var(--line)}
+.cart-empty svg{width:56px;height:56px;stroke:var(--line);fill:none;stroke-width:1.1;margin:0 auto 16px}
+.cart-empty h3{font-family:var(--serif);font-size:26px;margin-bottom:8px}
+.cart-empty p{color:var(--mute);margin-bottom:20px}
+
+/* ЧЕКАУТ */
+.co-layout{display:grid;grid-template-columns:1fr 380px;gap:44px;padding:32px 0 88px;align-items:start}
+.co-section{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;margin-bottom:20px}
+.co-section h3{font-family:var(--serif);font-size:22px;margin-bottom:20px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-grid .full{grid-column:1/-1}
+.opt{display:flex;align-items:flex-start;gap:12px;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;margin-bottom:10px;cursor:pointer;transition:var(--transition)}
+.opt:hover{border-color:var(--ink)}
+.opt.on{border-color:var(--accent);background:rgba(154,107,79,.04)}
+.opt input{margin-top:4px}
+.opt b{display:block;font-size:14px;margin-bottom:2px}
+.opt small{color:var(--mute);font-size:12.5px}
+
+/* ИНФО-СТРАНИЦЫ */
+.hero-mini{padding:80px 0 60px;text-align:center;background:var(--bg-soft);margin-bottom:60px}
+.hero-mini .eyebrow{margin-bottom:12px}
+.hero-mini h1{font-family:var(--serif);font-size:clamp(34px,5vw,64px);line-height:1.05;margin-bottom:14px}
+.hero-mini p{color:var(--mute);max-width:620px;margin:0 auto;font-size:15px}
+.info-page{max-width:860px;margin:0 auto;padding:0 0 88px}
+.info-page h2{font-family:var(--serif);font-size:30px;margin:44px 0 16px}
+.info-page h3{font-family:var(--sans);font-size:16px;font-weight:600;margin:26px 0 10px;color:var(--ink)}
+.info-page p{font-size:15px;line-height:1.75;color:var(--ink-soft);margin-bottom:14px}
+.info-page ul{list-style:disc;padding-left:22px;margin-bottom:16px;color:var(--ink-soft)}
+.info-page ul li{padding:4px 0;font-size:15px;line-height:1.7}
+
+/* АВТОРИЗАЦИЯ */
+.auth-wrap{padding:60px 0 100px}
+.auth-layout{max-width:440px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:44px;box-shadow:var(--shadow)}
+.auth-layout h2{font-family:var(--serif);font-size:32px;margin-bottom:8px;text-align:center}
+.auth-layout .lead{color:var(--mute);font-size:14px;margin-bottom:28px;text-align:center}
+.auth-layout .fld{margin-bottom:16px}
+.auth-layout .m-links{display:flex;justify-content:space-between;margin-top:16px;font-size:13.5px}
+.auth-layout .m-links a{color:var(--accent);font-weight:600}
+
+/* ОБРАЗЫ / LOOKS */
+.looks{columns:4;column-gap:16px;padding-top:32px}
+.look{break-inside:avoid;margin-bottom:16px;border-radius:var(--radius);overflow:hidden;position:relative;cursor:zoom-in;background:var(--bg-warm);display:block;width:100%}
+.look img{width:100%;height:auto;transition:transform .8s var(--transition)}
+.look:hover img{transform:scale(1.04)}
+.look::after{content:"+";position:absolute;right:12px;bottom:12px;width:36px;height:36px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:20px;line-height:1;opacity:0;transition:var(--transition)}
+.look:hover::after{opacity:1}
+
+/* БРЕНДЫ (главная) */
+.brands{background:var(--ink);color:#fff}
+.brands .eyebrow{color:#d9c3b0}
+.br-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.br-text h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,3.8vw,54px);line-height:1.04;margin-bottom:24px}
+.br-text p{color:#c9c0b6;margin-bottom:14px;max-width:560px;font-size:14.5px}
+.br-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.br-card{background:#fff;border-radius:var(--radius);padding:28px;display:grid;place-items:center;aspect-ratio:16/10;transition:var(--transition)}
+.br-card:hover{transform:translateY(-4px)}
+.br-card img{max-height:100%;max-width:100%;object-fit:contain}
+.br-photos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.br-photos img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);aspect-ratio:3/4}
+.br-photos img:nth-child(2){margin-top:48px}
+.br-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.btn-w-outline{border:1.5px solid rgba(255,255,255,.4);color:#fff}
+.btn-w-outline:hover{background:#fff;color:var(--ink)}
+
+/* КОНТАКТЫ */
+.visit{background:var(--bg-soft)}
+.v-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:stretch}
+.v-box{background:#fff;border-radius:20px;padding:44px;box-shadow:var(--shadow)}
+.v-box h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.4vw,46px);line-height:1.05;margin-bottom:22px}
+.v-row{display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.v-row svg{flex:none;width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.4;margin-top:2px;stroke-linecap:round;stroke-linejoin:round}
+.v-row small{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);font-weight:600}
+.v-row b,.v-row a{font-weight:600}
+.v-row a:hover{color:var(--accent)}
+.msgrs{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.msg{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:13px;color:#fff;transition:var(--transition)}
+.msg img{width:20px;height:20px;object-fit:contain;border-radius:50%}
+.msg.tg{background:#229ed9}.msg.mx{background:#6a4bd6}.msg.ph-c{background:var(--ink)}.msg.ig{background:linear-gradient(45deg,#f09433,#dc2743,#bc1888)}
+.msg:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.form-box h3{font-family:var(--serif);font-size:28px;font-weight:400;margin-bottom:6px}
+.form-box p{color:var(--mute);font-size:14px;margin-bottom:20px}
+.form-box .fld{margin-bottom:14px}
+.form-box textarea{min-height:100px;resize:vertical}
+.map-wrap{border-radius:var(--radius);overflow:hidden;margin-top:32px;border:1px solid var(--line)}
+.map-wrap iframe{width:100%;height:360px;border:0;display:block}
+
+/* ФУТЕР */
+footer.site{background:var(--ink);color:#c9c0b6;padding:64px 0 28px}
+.ft-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1)}
+.ft-grid h4{color:#fff;font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px;font-family:var(--sans);font-weight:600}
+.ft-grid li{margin-bottom:10px;font-size:14px}
+.ft-grid a:hover{color:#d9c3b0}
+.ft-brand .l1{font-family:var(--serif);font-size:28px;color:#fff;letter-spacing:.14em;text-transform:uppercase}
+.ft-brand p{margin-top:12px;font-size:13.5px;max-width:320px}
+.socials{display:flex;gap:10px;margin-top:16px}
+.socials a{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:var(--transition);overflow:hidden}
+.socials a:hover{background:var(--accent)}
+.socials img{width:22px;height:22px;object-fit:contain;border-radius:50%}
+.legal{padding-top:26px;font-size:12px;color:#8f877d;display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap}
+.legal p{max-width:760px}
+.legal a{text-decoration:underline}
+
+/* ЯЩИК КОРЗИНЫ */
+.overlay{position:fixed;inset:0;background:rgba(10,9,8,.55);backdrop-filter:blur(4px);z-index:90;opacity:0;visibility:hidden;transition:var(--transition)}
+.overlay.on{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:#fff;z-index:100;transform:translateX(100%);transition:transform .4s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;box-shadow:var(--shadow)}
+.drawer.on{transform:none}
+.drawer.left{right:auto;left:0;transform:translateX(-100%)}
+.drawer.left.on{transform:none}
+.dr-head{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border-bottom:1px solid var(--line)}
+.dr-head h3{font-family:var(--serif);font-size:26px;font-weight:400}
+.dr-body{flex:1;overflow:auto;padding:12px 24px}
+.dr-foot{padding:20px 24px;border-top:1px solid var(--line);background:var(--bg-soft)}
+.ci{display:grid;grid-template-columns:72px 1fr auto;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);align-items:center}
+.ci img{width:72px;height:94px;object-fit:cover;border-radius:10px;background:var(--bg-warm)}
+.ci h4{font-family:var(--sans);font-size:13.5px;font-weight:500;line-height:1.3;margin-bottom:6px}
+.ci .p{font-size:13.5px;font-weight:600}
+.rm{color:var(--mute);font-size:11.5px;text-decoration:underline;margin-top:6px;display:block}
+.rm:hover{color:#b23a3a}
+.tot{display:flex;justify-content:space-between;font-size:17px;font-weight:600;margin-bottom:6px}
+.hint{font-size:12px;color:var(--mute);margin-bottom:14px}
+
+/* МОДАЛКИ */
+.modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-46%);width:min(960px,calc(100% - 28px));max-height:calc(100vh - 28px);overflow:auto;background:#fff;border-radius:22px;z-index:100;opacity:0;visibility:hidden;transition:var(--transition);box-shadow:var(--shadow)}
+.modal.on{opacity:1;visibility:visible;transform:translate(-50%,-50%)}
+.modal.sm{width:min(440px,calc(100% - 28px))}
+.modal.md{width:min(720px,calc(100% - 28px))}
+.x{position:absolute;right:16px;top:16px;width:40px;height:40px;border-radius:50%;background:var(--bg-soft);display:grid;place-items:center;z-index:3;transition:var(--transition)}
+.x:hover{background:var(--ink);color:#fff}
+.x svg{width:17px;height:17px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round}
+.qv{display:grid;grid-template-columns:1fr 1fr}
+.qv-img{background:var(--bg-warm);min-height:420px;position:relative}
+.qv-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.qv-body{padding:46px 40px}
+.qv-body h2{font-family:var(--serif);font-size:32px;font-weight:400;line-height:1.1;margin:8px 0 14px}
+.qv-body .price{font-size:24px;margin:14px 0 20px}
+.qv-meta{font-size:13.5px;color:var(--ink-soft);margin:14px 0 22px;border-top:1px solid var(--line)}
+.qv-meta div{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line)}
+.qv-meta span{color:var(--mute)}
+.qv-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.qv-actions .btn{flex:1}
+.m-pad{padding:44px 38px 34px}
+.m-pad h3{font-family:var(--serif);font-size:30px;font-weight:400;margin-bottom:6px}
+.m-pad>p{color:var(--mute);margin-bottom:20px;font-size:14px}
+.m-pad .fld{margin-bottom:14px}
+.cmp{width:100%;border-collapse:collapse;font-size:13.5px;min-width:500px}
+.cmp td,.cmp th{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.cmp th{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);width:110px}
+.cmp img{width:100px;height:130px;object-fit:cover;border-radius:10px}
+.lb{position:fixed;inset:0;z-index:120;background:rgba(10,9,8,.94);display:none;place-items:center;padding:30px}
+.lb.on{display:grid}
+.lb img{max-height:92vh;max-width:92vw;object-fit:contain;border-radius:8px}
+.lb button{position:absolute;color:#fff;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;font-size:24px}
+.lb button:hover{background:rgba(255,255,255,.26)}
+.lb .c{top:20px;right:20px}.lb .pv{left:20px;top:50%}.lb .nx{right:20px;top:50%}
+
+/* МОБИЛЬНОЕ МЕНЮ */
+.mm a,.mm summary{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:15px;list-style:none;cursor:pointer}
+.mm summary::-webkit-details-marker{display:none}
+.mm summary::after{content:"+";float:right;font-size:19px;line-height:1;color:var(--mute)}
+.mm details[open] summary::after{content:"–"}
+.mm details a{padding:11px 0 11px 16px;font-weight:500;font-size:14px;color:var(--ink-soft);border-bottom:1px dashed var(--line)}
+.mm .sale{color:#b23a3a}
+
+/* ПЛАВАЮЩИЕ */
+.fab{position:fixed;right:20px;bottom:20px;z-index:55;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.fab a,.fab button{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.18);transition:var(--transition)}
+.fab a:hover,.fab button:hover{transform:scale(1.08)}
+.fab img{width:28px;height:28px;object-fit:contain}
+.fab .f-tg{background:#229ed9}.fab .f-mx{background:#6a4bd6}.fab .f-call{background:var(--accent)}
+.fab svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.fab .up{background:#fff;color:var(--ink);opacity:0;visibility:hidden}
+.fab .up.on{opacity:1;visibility:visible}
+.fab .up svg{stroke:var(--ink)}
+.toast{position:fixed;left:50%;top:22px;transform:translate(-50%,-90px);background:var(--ink);color:#fff;padding:14px 24px;border-radius:999px;z-index:130;transition:var(--transition);font-size:14px;box-shadow:var(--shadow);max-width:calc(100% - 28px)}
+.toast.on{transform:translate(-50%,0)}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+
+/* АДАПТИВ */
+@media(max-width:1180px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .looks{columns:3}
+  .sp-grid{grid-template-columns:repeat(2,1fr)}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:980px){
+  nav.main{display:none}
+  .burger{display:grid}
+  .hd{grid-template-columns:auto 1fr auto;min-height:68px}
+  .hd-phone{display:none}
+  .logo .l1{font-size:22px}
+  .logo .l2{letter-spacing:.18em;font-size:9px}
+  .topbar .tb-links{display:none}
+  .ben-grid{grid-template-columns:1fr 1fr}
+  .ben:nth-child(2){border-right:0}
+  .ben:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .br-grid,.v-grid{grid-template-columns:1fr}
+  .qv{grid-template-columns:1fr}
+  .qv-img{min-height:340px}
+  section{padding:60px 0}
+  .acts,.add-row{opacity:1;transform:none}
+  .add-row{position:static;margin-top:10px}
+  .cap{bottom:48px}
+  .hero-nav{display:none}
+  .cat-layout,.product-layout,.cart-layout,.co-layout{grid-template-columns:1fr;gap:28px}
+  .cat-sidebar,.gallery,.cart-summary{position:static}
+  .form-grid{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .wrap{padding:0 16px}
+  .grid{grid-template-columns:repeat(2,1fr);gap:22px 12px}
+  .looks{columns:2;column-gap:10px}
+  .look{margin-bottom:10px}
+  .cats{gap:10px}
+  .cat h3{font-size:20px}
+  .cat div{left:14px;right:14px;bottom:14px}
+  .cat span{width:30px;height:30px}
+  .sp-grid{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr}
+  .v-box{padding:28px 22px}
+  .m-pad{padding:36px 22px 26px}
+  .qv-body{padding:28px 22px 30px}
+  .slides{aspect-ratio:4/5;max-height:70vh}
+  .cap{left:16px;right:16px;bottom:40px}
+  .cap h2{font-size:34px}
+  .btn{padding:13px 20px}
+  .notice{padding:18px}
+  .info h3{font-size:13px}
+  .price{font-size:15.5px}
+  .fab{right:12px;bottom:12px}
+  .fab a,.fab button{width:46px;height:46px}
+  .ben{padding:18px 12px;gap:10px}
+  .ben svg{width:24px;height:24px}
+  .ben b{font-size:12.5px}
+  .ben span{font-size:11.5px}
+  .cart-row{grid-template-columns:72px 1fr;gap:14px}
+  .cart-row img{width:72px;height:94px}
+  .cart-row .line-total,.cart-row .line-actions{grid-column:1/-1}
+  .cart-row .line-actions{display:flex;justify-content:space-between;align-items:center}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div><span class="dot"></span><b>Бесплатная доставка по России</b> · Итальянская одежда в Екатеринбурге</div>
+    <div class="tb-links">
+      <a href="#/catalog">Интернет-магазин</a>
+      <a href="#/delivery">Доставка и оплата</a>
+      <a href="tel:+79126643006"><b>+7 (912) 664-30-06</b></a>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap hd">
+    <div class="hd-left">
+      <button class="icon-btn burger" id="burger" aria-label="Меню"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+      <button class="icon-btn" id="searchBtn" aria-label="Поиск"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+    </div>
+    <a href="#/" class="logo" aria-label="Sarah Pacini — на главную">
+      <span class="l1">Sarah Pacini</span>
+      <span class="l2">Бутик итальянской одежды · Екатеринбург</span>
+    </a>
+    <div class="hd-right">
+      <div class="hd-phone"><a href="tel:+79126643006">+7 (912) 664-30-06</a><small>Ежедневно 10:00–20:00</small></div>
+      <button class="icon-btn" id="cmpBtn" aria-label="Сравнение"><svg viewBox="0 0 24 24"><path d="M7 4v16M17 4v16M3 8l4-4 4 4M13 16l4 4 4-4"/></svg><span class="badge" id="cmpBadge" data-n="0"></span></button>
+      <a class="icon-btn" href="#/account" aria-label="Личный кабинет"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></a>
+      <button class="icon-btn" id="cartBtn" aria-label="Корзина"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="badge" id="cartBadge" data-n="0"></span></button>
+    </div>
+  </div>
+  <nav class="main"><div class="wrap"><ul class="nav-list" id="navList"></ul></div></nav>
+</header>
+
+<div class="search-panel" id="searchPanel">
+  <div class="wrap sp-in">
+    <div class="sp-title">Поиск по каталогу</div>
+    <form id="searchForm" autocomplete="off">
+      <div class="sp-grid">
+        <div class="fld"><label for="f_name">Название или артикул</label><input id="f_name" type="text" placeholder="Например: льняная рубашка или CFDTRCE144"></div>
+        <div class="fld"><label>Цена (руб.)</label><div class="pr"><input id="f_pmin" type="number" min="0" placeholder="от"><input id="f_pmax" type="number" min="0" placeholder="до"></div></div>
+        <div class="fld"><label for="f_brand">Бренд</label><select id="f_brand"><option value="">Все</option><option value="sarah-pacini">Sarah Pacini</option><option value="transit">TRANSIT</option></select></div>
+        <div class="fld"><label for="f_cat">Категория</label><select id="f_cat"></select></div>
+      </div>
+      <div class="sp-actions">
+        <button type="button" class="btn btn-soft btn-sm" id="spClose">Закрыть</button>
+        <button type="submit" class="btn btn-dark btn-sm">Найти</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<main id="app"></main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="l1">Sarah Pacini</div>
+        <p>Бутик итальянской брендовой одежды. Sarah Pacini, TRANSIT, Европейская культура.</p>
+        <div class="socials">
+          <a href="https://max.ru/u/f9LHodD0cOJoU7f1neCyUfe7MM_fpaE9rcEw2Eq0jK_FXXeBC4DmUqIfuSA" target="_blank" rel="noopener" aria-label="MAX"><img data-src="max-messenger-sign-l.svg" alt="MAX"></a>
+          <a href="https://t.me/+9qPt_0Mn9gw2MGFi" target="_blank" rel="noopener" aria-label="Telegram"><img data-src="telegram_logosvg.png" alt="Telegram"></a>
+          <a href="https://www.instagram.com/sarah_pacini_ekb/" target="_blank" rel="noopener" aria-label="Instagram"><img data-src="foto_dlya_poslednikh_rabot_215.jpg" alt="Instagram"></a>
+        </div>
+      </div>
+      <div>
+        <h4>Магазин</h4>
+        <ul>
+          <li><a href="#/catalog">Каталог</a></li>
+          <li><a href="#/sale">Распродажа</a></li>
+          <li><a href="#/looks">Образы / Луки</a></li>
+          <li><a href="#/brands">Бренды</a></li>
+          <li><a href="#/cart">Корзина</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Информация</h4>
+        <ul>
+          <li><a href="#/">Главная</a></li>
+          <li><a href="#/about">О компании</a></li>
+          <li><a href="#/delivery">Доставка и оплата</a></li>
+          <li><a href="#/contacts">Контакты</a></li>
+          <li><a href="#/account">Личный кабинет</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+79126643006">+7 (912) 664-30-06</a></li>
+          <li>Ежедневно с 10:00 до 20:00</li>
+          <li>г. Екатеринбург, ул. Посадская, 28а, ТЦ «Универбыт», 2 этаж, бутик №200</li>
+          <li><a href="mailto:irina_shupova@mail.ru">irina_shupova@mail.ru</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p>Цена, указанная на сайте, носит исключительно информационно-рекламный характер и не является офертой или публичной офертой в соответствии со ст. 435 и п. 2 ст. 437 ГК РФ. Цену и наличие уточняйте по тел. 8-912-664-30-06.</p>
+      <p>© 2017 – 2026 · Sarah Pacini Ekaterinburg</p>
+    </div>
+  </div>
+</footer>
+
+<div class="fab">
+  <button class="up" id="toTop" aria-label="Наверх"><svg viewBox="0 0 24 24"><path d="m6 14 6-6 6 6"/></svg></button>
+  <a class="f-mx" href="https://max.ru/u/f9LHodD0cOJoU7f1neCyUfe7MM_fpaE9rcEw2Eq0jK_FXXeBC4DmUqIfuSA" target="_blank" rel="noopener" aria-label="MAX"><img data-src="max-messenger-sign-l.svg" alt=""></a>
+  <a class="f-tg" href="https://t.me/+9qPt_0Mn9gw2MGFi" target="_blank" rel="noopener" aria-label="Telegram"><img data-src="telegram_logosvg.png" alt=""></a>
+  <a class="f-call" href="tel:+79126643006" aria-label="Позвонить"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></a>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<div class="overlay" id="overlay"></div>
+
+<aside class="drawer left" id="mobMenu" aria-label="Меню">
+  <div class="dr-head"><h3>Каталог</h3><button class="icon-btn" data-close aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="dr-body mm" id="mmBody"></div>
+  <div class="dr-foot"><a class="btn btn-dark btn-block" href="tel:+79126643006">+7 (912) 664-30-06</a></div>
+</aside>
+
+<aside class="drawer" id="cartDrawer" aria-label="Корзина">
+  <div class="dr-head"><h3>Корзина</h3><button class="icon-btn" data-close aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div class="dr-body" id="cartBody"></div>
+  <div class="dr-foot" id="cartFoot"></div>
+</aside>
+
+<div class="modal" id="qvModal" role="dialog" aria-modal="true"><button class="x" data-close aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button><div id="qvBody"></div></div>
+<div class="modal sm" id="oneClick" role="dialog" aria-modal="true">
+  <button class="x" data-close aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="m-pad">
+    <h3>Купить в один клик</h3><p id="ocItem"></p>
+    <form id="ocForm">
+      <div class="fld"><label for="oc_name">Ваше имя</label><input id="oc_name" required></div>
+      <div class="fld"><label for="oc_phone">Телефон</label><input id="oc_phone" type="tel" required placeholder="+7"></div>
+      <button class="btn btn-dark btn-block" type="submit">Отправить заявку</button>
+    </form>
+    <p style="margin-top:14px;font-size:12px">Заявка откроется в письме на e-mail магазина.</p>
+  </div>
+</div>
+<div class="modal md" id="cmpModal" role="dialog" aria-modal="true">
+  <button class="x" data-close aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="m-pad"><h3>Сравнение товаров</h3><div style="overflow:auto" id="cmpBody"></div></div>
+</div>
+<div class="lb" id="lb"><button class="c" aria-label="Закрыть">×</button><button class="pv" aria-label="Назад">‹</button><img alt=""><button class="nx" aria-label="Вперёд">›</button></div>
+
+<script>
+(function(){
+'use strict';
+const B='https://lady-blues.ru';
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const rub=n=>new Intl.NumberFormat('ru-RU').format(n)+' ₽';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const img=f=>B+'/d/'+f;
+const hideBroken=e=>{e.target.style.display='none'};
+
+/* ============== ДАННЫЕ ============== */
+const MENU=[
+ {t:'Смотреть ВСЁ',href:'#/catalog'},
+ {t:'Каталог одежды',href:'#/catalog',s:[['Каталог одежды','#/catalog',1],['Брюки и леггинсы','#/catalog?cat=bryuki'],['Джемпера / Кофты','#/catalog?cat=dgempera'],['Кардиганы / Жакеты / Жилеты','#/catalog?cat=cardigany'],['Футболки / Рубашки / Блузы','#/catalog?cat=futbolki'],['Топы / Базы','#/catalog?cat=topy'],['Платья','#/catalog?cat=platya'],['Юбки','#/catalog?cat=yubki'],['Верхняя одежда','#/catalog?cat=verhnyaya-odezhda'],['Палантины / Шарфы / Шапки','#/catalog?cat=palantiny']]},
+ {t:'Sarah Pacini',href:'#/catalog?brand=sarah-pacini',s:[['Sarah Pacini','#/catalog?brand=sarah-pacini',1],['Джемпера / Кофты','#/catalog?brand=sarah-pacini&cat=dgempera'],['Кардиганы','#/catalog?brand=sarah-pacini&cat=cardigany'],['БАЗЫ / ТОПЫ','#/catalog?brand=sarah-pacini&cat=topy'],['Брюки и леггинсы','#/catalog?brand=sarah-pacini&cat=bryuki'],['Платья','#/catalog?brand=sarah-pacini&cat=platya'],['Аксессуары','#/catalog?cat=palantiny']]},
+ {t:'TRANSIT',href:'#/catalog?brand=transit'},
+ {t:'ANNETTE GORTZ',href:'#/catalog?brand=annette-gortz'},
+ {t:'Верхняя одежда',href:'#/catalog?cat=verhnyaya-odezhda'},
+ {t:'Аксессуары',href:'#/catalog?cat=palantiny',s:[['Все аксессуары','#/catalog?cat=palantiny',1],['Палантины / Шарфы / Шапки','#/catalog?cat=palantiny'],['Сумки / Ремни','#/catalog?cat=sumki'],['Украшения','#/catalog?cat=ukrasheniya']]},
+ {t:'KristenseN du Nord',href:'#/catalog?brand=kristensen'},
+ {t:'Европейская культура',href:'#/catalog?brand=evropejskaya-kultura'},
+ {t:'РАСПРОДАЖА',href:'#/sale',sale:1},
+ {t:'ОБРАЗЫ / ЛУКИ',href:'#/looks'}
+];
+const CAT_SLUGS={'bryuki':'Брюки и леггинсы','dgempera':'Джемпера / Кофты','cardigany':'Кардиганы / Жакеты / Жилеты','futbolki':'Футболки / Рубашки / Блузы','topy':'Топы / Базы','platya':'Платья','yubki':'Юбки','verhnyaya-odezhda':'Верхняя одежда','palantiny':'Палантины / Шарфы / Шапки','aksessuary':'Аксессуары'};
+const BRAND_SLUGS={'sarah-pacini':'Sarah Pacini','transit':'TRANSIT'};
+const SLIDES=[
+ ['slajd_1_431212.jpg','Сара · летняя коллекция 2026','Sarah Pacini','#/catalog?brand=sarah-pacini','Смотреть коллекцию'],
+ ['slajd_1.jpg','Транзит · лето 2026','TRANSIT','#/catalog?brand=transit','Смотреть коллекцию'],
+ ['slajd_kristensen_na_glavnuyu.jpg','Кристенсен · коллекция 2024','KristenseN du Nord','#/catalog?brand=kristensen','Смотреть коллекцию'],
+ ['tranzit_zima_22.png','Транзит · избранное','TRANSIT','#/catalog?brand=transit','Выбрать образ'],
+ ['slajd_aksessuary.jpg','Аксессуары','Дополните образ','#/catalog?cat=palantiny','В каталог'],
+ ['ukrasheniya.jpg','Украшения','Murano','#/catalog?cat=ukrasheniya','Смотреть украшения'],
+ ['slayd_filosofiya.jpg','Философия бренда','Sarah Pacini','#/about','Узнать больше']
+];
+const CATS=[
+ ['Sarah Pacini','#/catalog?brand=sarah-pacini','26211100-53.jpg'],
+ ['TRANSIT','#/catalog?brand=transit','cfdtrcv316-12_01_f_600x.jpg'],
+ ['Платья','#/catalog?cat=platya','img_8895.jpg'],
+ ['Аксессуары','#/catalog?cat=palantiny','scadtrc2000-04_01_t_600x.jpg'],
+ ['Рубашки и блузы','#/catalog?cat=futbolki','img_8943.jpg'],
+ ['Брюки','#/catalog?cat=bryuki','img_8924.jpg'],
+ ['Жакеты и жилеты','#/catalog?cat=cardigany','img_9034.jpg'],
+ ['Распродажа','#/sale','cfdtrcv317-04.jpg']
+];
+const P=[
+['Джемпер Sarah Pacini 26211100-53','26211100-53.jpg','dzhemper-sarah-pacini-26211100-02',0],
+['Джемпер Sarah Pacini 26211100-02','26211100.jpg','dzhemper-sarah-pacini-26211014-02',0],
+['Трикотажные брюки Sarah Pacini 26211021-02','26211021.jpg','trikotazhnye-bryuki-sarah-pacini-24111019-05-2',0],
+['Жилет Sarah Pacini 26211018-02','26211018.jpg','zhilet-sarah-pacini-26113001-12',0],
+['Джемпер Sarah Pacini 26211014-02','26211014.jpg','dzhemper-sarah-pacini-26211013-02',0],
+['Джемпер Sarah Pacini 26211013-02','26211013.jpg','kofta-sarah-pacini-2521113-1',0],
+['Базовая водолазка Sarah Pacini 109308-02','109308-02.jpg','bazovaya-vodolazka-sarah-pacini-24112511-v-assortimente',0],
+['Палантин Sarah Pacini 22114002-43','22114002-43-00-1.jpg','palantin-sarah-pacini-10963009-00',19241],
+['Палантин Sarah Pacini 10963009-00','10963009-00-5.jpg','palantin-sarah-pacini-24114504-43',33770],
+['Брюки из вискозы TRANSIT CFDTRWT291-05','cfdtrwt290-05-11.jpg','zhaket-pidzhak-iz-viskozy-transit-cfdtrwt290-05',32130],
+['Жакет (пиджак) из вискозы TRANSIT CFDTRWT290-05','cfdtrwt290-05-13.jpg','zhaket-pidzhak-iz-lna-i-iskusstvennogo-shelka-transit-cfdtrtb110-1',42930],
+['Шарф женский тонкий TRANSIT SCADTRC2000','scadtrc2000-4.jpg','udlinennyj-lnyanoj-zhilet-transit-cfdtrdb116-11',7700],
+['Удлиненный льняной жилет TRANSIT CFDTRDB116-11','cfdtrdb116-11-8.jpg','lnyanoj-zhilet-transit-cfdtrda102-102',27500],
+['Льняные брюки TRANSIT CFDTRDA103-102','cfdtrda102-102-1.jpg','hlopkovye-bryuki-transit-cfdtrcb115-04',23980],
+['Льняной жилет TRANSIT CFDTRDA102-102','cfdtrda102-102-2.jpg','futbolka-bez-rukavov-transit-cfdtrcv313-02',18040],
+['Футболка без рукавов TRANSIT CFDTRCV313-02','cfdtrcv313-02-3.jpg','futbolka-bez-rukavov-transit-cfdtrcv313-04',12100],
+['Рубашка из искусственного шелка TRANSIT CFDTRCV310-10','20260705_110412.jpg','rubashka-iz-iskusstvennogo-shelka-transit-cfdtrcv310-04',25300],
+['Футболка TRANSIT CFDTRCK201-25','cfdtrck201-25.jpg','futbolka-transit-cfdtrck201',15180],
+['Рубашка из искусственного шелка TRANSIT CFDTRCV310-04','cfdtrcv310-04.jpg','rubashka-iz-iskusstvennogo-shelka-transit-cfdtrcv310-14',25300],
+['Мягкий шелковый жилет TRANSIT CFDTRCV317-04','cfdtrcv317-04.jpg','myagkij-shelkovyj-zhilet-transit-cfdtrcv317-02',34540],
+['Мягкий шелковый жилет TRANSIT CFDTRCV317-02','cfdtrcv317-02_01_t_7768e63c-ff62-4dae-9506-ee8c2bc22d36_600x.jpg','dvubortnyj-trench-s-poyasom-iz-shelka-transit-cfdtrcv316',34540],
+['Двубортный тренч с поясом из шелка TRANSIT CFDTRCV316','cfdtrcv316-12_01_f_600x.jpg','zhaket-pidzhak-iz-lna-i-iskusstvennogo-shelka-transit-cfdtrtb110',50600],
+['Платье TRANSIT CFDTRCV315-05','cfdtrcv315-05_01_t_600x.jpg','lnyanoe-plate-transit-135-15',29700],
+['Брюки TRANSIT CFDTRCV314-04','cfdtrcv314-04_01_t_600x.jpg','bryuki-transit-cfdtrng-163-04',23980],
+['Футболка без рукавов TRANSIT CFDTRCV313-04','cfdtrcv313-04_01_s_600x.jpg','futbolka-bez-rukavov-transit-cfdtrck200-1',12100],
+['Рубашка из искусственного шелка TRANSIT CFDTRCV310-14','cfdtrcv310-14_01_s_600x.jpg','rubashka-iz-lna-i-iskusstvennogo-shelka-transit-cfdtrtb113-1',25300],
+['Футболка TRANSIT CFDTRCK201','cfdtrck201-16_01_t_600x.jpg','futbolka-bez-rukavov-transit-cfdtrck200',15180],
+['Футболка без рукавов TRANSIT CFDTRCK200','cfdtrck200-10_01_s_600x.jpg','futbolka-transit-cfdtrcj192',12100],
+['Хлопковые брюки TRANSIT CFDTRCB115-04','cfdtrcb115-04-4.jpg','lnyanye-bryuki-transit-cfdtrtd138-15',21780],
+['Брюки TRANSIT CFDTRNG 163-04','img_9057.jpg','bryuki-transit-g163-04',30322],
+['Жакет (пиджак) из льна и искусственного шелка TRANSIT CFDTRTB110','img_9034.jpg','rubashka-iz-lna-i-iskusstvennogo-shelka-transit-cfdtrtb113',34510],
+['Рубашка из льна и искусственного шелка TRANSIT CFDTRTB113','img_9045.jpg','lnyanaya-rubashka-transit-cfdtrce144-11',42602],
+['Льняные брюки TRANSIT CFDTRTD138-15','img_8999.jpg','bryuki-transit-cfdtrcc121',17300],
+['Льняной жакет TRANSIT CFDTRTD136-15','img_9004.jpg','lnyanoj-zhaket-transit-cfdtrcc122',27980],
+['Льняное платье TRANSIT 135-15','img_8981.jpg','lnyanoe-plate-transit-135-4010-1',27900],
+['Льняная рубашка TRANSIT CFDTRCE144-11','img_8943.jpg','lnyanaya-rubashka-transit-cfdtrce144-00-1',27300],
+['Брюки TRANSIT CFDTRCC121','img_8924.jpg','bryuki-transit-cfdtrcc121-12-1',25300],
+['Льняной жакет TRANSIT CFDTRCC122','img_8921.jpg','lnyanoj-zhaket-rubashka-transit-cfdtrcd130-1',30100],
+['Льняная рубашка TRANSIT CFDTRWD130','img_8919.jpg','lnyanaya-rubashka-transit-cfdtrce144-00',33750],
+['Платье Sarah Pacini 25113035-22','img_8895.jpg','dlinnoe-plate-sarah-pacini-26113593-02-99913593-1',41300],
+['Рубашка Sarah Pacini 25113054','img_8892.jpg','rubashka-sarah-pacini-26111003-02',35230],
+['Льняная рубашка TRANSIT CFDTRCE144-00','img_8876.jpg','lnyanaya-rubashka-transit-cfdtrce144-10',27300],
+['Льняная рубашка TRANSIT CFDTRCE144-10','img_8827.jpg','lnyanaya-rubashka-transit-cfdtrce142-11',27300],
+['Льняная рубашка TRANSIT CFDTRCE142-11','img_8849.jpg','lnyanaya-rubashka-transit-cfdtrce142-10',21800],
+['Льняная рубашка TRANSIT CFDTRCE142-10','img_8813.jpg','lnyanaya-rubashka-transit-cfdtrce142-00-1',21800],
+['Футболка TRANSIT CFDTRCJ192','img_8799.jpg','futbolka-transit-cfdtrcj190',15250],
+['Рубашка Sarah Pacini 26111003-02','img_8747.jpg','letnij-sviter-s-kapyushonom-sarah-pacini-26111107-02-1',39754],
+['Льняная рубашка TRANSIT CFDTRWE141','img_8678.jpg','lnyanoj-zhaket-rubashka-transit-cfdtrcd130',21060],
+['Льняной жакет/рубашка TRANSIT CFDTRCD130','img_8612.jpg','lnyanoj-zhaket-rubashka-transit-cfdtrcd1301',25300],
+['Брюки Sarah Pacini 26133012-12','26133012-12-2.jpg','bryuki-sarah-pacini-26113004-12',36680]
+];
+const LOOKS=['h4_13.jpg','look_17_donna.jpg','h3_17.jpg','look_15_donna-683x1024.jpg','h3_04.jpg','look_16_donna-683x1024.jpg','h3_11.jpg','scadtrc2000-04_01_t_600x.jpg','cfdtrcd1301-01_01_t_361ef2b2-27e9-4be4-b6b5-7038de5e9c58_600x.jpg','cfdtrce141-10_01_t_600x.jpg','26111093-33-2.jpg','26111086-2.jpg','26113006-02-2.jpg','cfdtrcc121-12_01_t_600x.jpg'];
+
+/* ============== ФАБРИКА ТОВАРОВ ============== */
+const catOf=n=>{n=n.toLowerCase();
+ if(/джемпер|свитер|кофт/.test(n))return 'Джемпера / Кофты';
+ if(/брюки|леггинс/.test(n))return 'Брюки и леггинсы';
+ if(/жилет|жакет|кардиган|тренч/.test(n))return 'Кардиганы / Жакеты / Жилеты';
+ if(/куртк|пальто/.test(n))return 'Верхняя одежда';
+ if(/футболк|рубашк|блуз|туник/.test(n))return 'Футболки / Рубашки / Блузы';
+ if(/водолазк|топ/.test(n))return 'Топы / Базы';
+ if(/платье/.test(n))return 'Платья';
+ if(/юбк/.test(n))return 'Юбки';
+ if(/палантин|шарф|шапк/.test(n))return 'Палантины / Шарфы / Шапки';
+ return 'Каталог одежды'};
+const artOf=n=>{const m=n.match(/(CFDTR[A-Z0-9]*(?:[ -]\d+)*|SCADTRC\d+|\d{5,}(?:-\d+)?)\s*$/);return m?m[1].replace(/\s+/g,''):''};
+const SIZES=['XS','S','M','L','XL'];
+const COMPOSITIONS=['Лён 70%, хлопок 30%','Шёлк 100%','Вискоза 95%, эластан 5%','Хлопок 100%','Лён 100%','Шерсть 80%, кашемир 20%','Хлопок 60%, лён 40%'];
+const DESCRIPTIONS={
+ 'Джемпер':'Мягкий джемпер из новой коллекции. Свободный силуэт, спущенная линия плеча и деликатная фактура полотна создают ощущение комфорта на каждый день. Модель одинаково хорошо смотрится с брюками и с юбкой.',
+ 'Свитер':'Свитер из благородной пряжи. Свободная посадка и мягкая фактура ткани делают его универсальной вещью на прохладные вечера. Носите с джинсами, брюками или поверх платья.',
+ 'Кофта':'Трикотажная кофта с аккуратной посадкой. Деликатная фактура полотна и универсальный цвет — вещь, к которой хочется возвращаться снова и снова.',
+ 'Брюки':'Брюки свободного кроя с удобной посадкой. Ткань приятна к телу и не сковывает движения — идеальная база для повседневных образов. Сочетаются с футболкой, рубашкой или джемпером.',
+ 'Платье':'Платье из коллекции сезона. Мягкие линии, аккуратная посадка по фигуре и благородная фактура ткани подчёркивают женственность. Дополните аксессуарами или носите как есть.',
+ 'Рубашка':'Рубашка из натуральной ткани. Классический крой, аккуратные детали и универсальный цвет — вещь, которая легко сочетается с чем угодно. Носите заправленной или на выпуск.',
+ 'Жилет':'Удлинённый жилет — стильный акцент образа. Носите поверх футболки, рубашки или платья: он добавит структуру и завершённость. Универсальная вещь в гардеробе.',
+ 'Жакет':'Жакет из коллекции сезона. Мягкий крой, деликатная посадка и благородная ткань делают его универсальной вещью в гардеробе. Подходит и для офиса, и для повседневных образов.',
+ 'Футболка':'Базовая футболка из мягкой ткани. Универсальный крой, приятная к телу фактура и сдержанный цвет — для повседневных образов. Хорошо сочетается с брюками и юбками.',
+ 'Палантин':'Палантин из тонкой пряжи. Тёплый, лёгкий и невесомый — завершит образ и добавит уюта в прохладный день. Универсальный размер позволяет драпировать его разными способами.',
+ 'Шарф':'Тонкий шарф из мягкой ткани. Универсальный аксессуар, который легко драпируется и подходит к любой верхней одежде. Создаёт акцент или дополняет базовый образ.',
+ 'Тренч':'Двубортный тренч с поясом из благородной ткани. Классический силуэт, элегантные детали и универсальный цвет — на все сезоны.',
+ 'Кардиган':'Кардиган свободного кроя. Мягкая посадка, аккуратные детали и универсальный цвет — вещь, к которой хочется возвращаться. Носите нараспашку или застёгнутым.'
+};
+function describe(x){
+  const n=x.name.toLowerCase();
+  for(const k of Object.keys(DESCRIPTIONS)) if(n.includes(k.toLowerCase())) return DESCRIPTIONS[k];
+  return 'Модель из коллекции сезона. Мягкий крой, благородная ткань и универсальный цвет — вещь, которая легко впишется в базовый гардероб.';
+}
+function sizesFor(id){return SIZES.filter((_,i)=>(id*7+i*3)%4!==0)}
+function compFor(id){return COMPOSITIONS[id%COMPOSITIONS.length]}
+const items=P.map((r,i)=>{
+  const id=i+1, price=r[3], isTR=/TRANSIT/.test(r[0]);
+  return {
+    id, name:r[0], file:r[1], slug:r[2], url:'#/product/'+id,
+    price, brand:isTR?'TRANSIT':'Sarah Pacini',
+    cat:catOf(r[0]), art:artOf(r[0]), isNew:true, spec:false,
+    sizes:sizesFor(id), composition:compFor(id), desc:describe({name:r[0]}),
+    gallery:[r[1], LOOKS[id%LOOKS.length], LOOKS[(id+3)%LOOKS.length], LOOKS[(id+7)%LOOKS.length]]
+  };
+});
+const byId=id=>items.find(x=>x.id==id);
+
+/* ============== СОСТОЯНИЕ ============== */
+const cart=store.get('sp_cart',{});
+const cmp=store.get('sp_cmp',[]);
+const saveCart=()=>store.set('sp_cart',cart);
+
+/* ============== УТИЛИТЫ ============== */
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(window.__tt);window.__tt=setTimeout(()=>t.classList.remove('on'),2400)}
+function pop(el){el.animate([{transform:'scale(1)'},{transform:'scale(1.5)'},{transform:'scale(1)'}],{duration:350})}
+function parseHash(){
+  const raw=location.hash.slice(1)||'/';
+  const [path,query='']=raw.split('?');
+  return {path,params:new URLSearchParams(query)};
+}
+function setPage(title,html){
+  document.title=title+' — Sarah Pacini';
+  $('#app').innerHTML=html;
+  window.scrollTo({top:0,behavior:'instant'});
+  $$('#app img').forEach(i=>i.addEventListener('error',hideBroken));
+  $$('img[data-src]').forEach(i=>{i.referrerPolicy='no-referrer';i.src=img(i.dataset.src);i.addEventListener('error',hideBroken)});
+}
+const ICO_CMP='<svg viewBox="0 0 24 24"><path d="M7 4v16M17 4v16M3 8l4-4 4 4M13 16l4 4 4-4"/></svg>';
+const ICO_EYE='<svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>';
+
+/* ============== КОМПОНЕНТЫ ============== */
+function ProductCard(x){
+  return `<article class="card" data-id="${x.id}">
+   <div class="ph" data-qv="${x.id}"><div class="ph-fallback">SP</div>
+    <img src="${img(x.file)}" alt="${esc(x.name)}" loading="lazy" referrerpolicy="no-referrer">
+    <div class="tags"><span class="tag new">Новинка</span>${x.spec?'<span class="tag sale">Sale</span>':''}</div>
+    <div class="acts">
+      <button data-cmp="${x.id}" class="${cmp.includes(x.id)?'on':''}" aria-label="Сравнить">${ICO_CMP}</button>
+      <button data-qv="${x.id}" aria-label="Быстрый просмотр">${ICO_EYE}</button>
+    </div>
+    <div class="add-row"><button class="btn btn-dark btn-sm btn-block" data-add="${x.id}">В корзину</button></div></div>
+   <div class="info">
+     <div class="brand">${esc(x.brand)}</div>
+     <h3><a href="#/product/${x.id}">${esc(x.name)}</a></h3>
+     ${x.price?`<div class="price">${rub(x.price)}</div>`:`<div class="price rq">Цена по запросу</div>`}
+   </div></article>`;
+}
+function Breadcrumbs(arr){
+  return `<div class="wrap"><div class="breadcrumbs">${arr.map(([t,h],i)=>
+    i===arr.length-1?`<b>${esc(t)}</b>`:`<a href="${h}">${esc(t)}</a><span>/</span>`
+  ).join('')}</div></div>`;
+}
+
+/* ============== КОРЗИНА (ящик) ============== */
+function addCart(id,n=1){cart[id]=(cart[id]||0)+n;saveCart();drawCart();toast('Добавлено в корзину');pop($('#cartBadge'))}
+function drawCart(){
+  const ids=Object.keys(cart).filter(k=>byId(k)),n=ids.reduce((s,k)=>s+cart[k],0);
+  const b=$('#cartBadge');b.textContent=n||'';b.dataset.n=n;
+  const body=$('#cartBody'),foot=$('#cartFoot');
+  if(!body)return;
+  if(!ids.length){
+    body.innerHTML='<div class="cart-empty" style="border:0;padding:40px 10px"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><p>Корзина пуста</p></div>';
+    foot.innerHTML='<a class="btn btn-outline btn-block" href="#/catalog" data-close>Перейти к покупкам</a>';
+    return;
+  }
+  let sum=0,rq=false;
+  body.innerHTML=ids.map(k=>{const x=byId(k),q=cart[k];if(x.price)sum+=x.price*q;else rq=true;
+   return `<div class="ci"><img src="${img(x.file)}" alt="" referrerpolicy="no-referrer"><div><h4>${esc(x.name)}</h4><div class="qty"><button data-q="-1" data-id="${k}">−</button><span>${q}</span><button data-q="1" data-id="${k}">+</button></div></div><div style="text-align:right"><div class="p">${x.price?rub(x.price*q):'по запросу'}</div><button class="rm" data-rm="${k}">Удалить</button></div></div>`;
+  }).join('');
+  foot.innerHTML=`<div class="tot"><span>Итого</span><span>${rub(sum)}${rq?' +':''}</span></div>
+    <div class="hint">${rq?'Часть товаров — цена по запросу. ':''}Доставка по России бесплатно.</div>
+    <a class="btn btn-dark btn-block" href="#/checkout" data-close>Оформить заказ</a>
+    <a class="btn btn-outline btn-block" href="#/cart" data-close style="margin-top:8px">Перейти в корзину</a>`;
+}
+document.addEventListener('click',e=>{
+  const q=e.target.closest('[data-q]');if(q){const id=q.dataset.id;cart[id]+=+q.dataset.q;if(cart[id]<1)delete cart[id];saveCart();drawCart()}
+  const r=e.target.closest('[data-rm]');if(r){delete cart[r.dataset.rm];saveCart();drawCart()}
+});
+
+/* ============== СРАВНЕНИЕ ============== */
+function toggleCmp(id){const i=cmp.indexOf(id);if(i>-1)cmp.splice(i,1);else{if(cmp.length>=4){toast('Максимум 4 товара');return}cmp.push(id)}store.set('sp_cmp',cmp);drawCmp();toast(i>-1?'Убрано из сравнения':'Добавлено к сравнению')}
+function drawCmp(){const n=cmp.length;const b=$('#cmpBadge');if(b){b.textContent=n||'';b.dataset.n=n}}
+function openCmp(){
+  if(!cmp.length){toast('Добавьте товары к сравнению');return}
+  const xs=cmp.map(byId).filter(Boolean);
+  $('#cmpBody').innerHTML=`<table class="cmp">
+   <tr><th></th>${xs.map(x=>`<td><img src="${img(x.file)}" alt="" referrerpolicy="no-referrer"></td>`).join('')}</tr>
+   <tr><th>Название</th>${xs.map(x=>`<td><a href="#/product/${x.id}" data-close>${esc(x.name)}</a></td>`).join('')}</tr>
+   <tr><th>Бренд</th>${xs.map(x=>`<td>${esc(x.brand)}</td>`).join('')}</tr>
+   <tr><th>Артикул</th>${xs.map(x=>`<td>${esc(x.art||'—')}</td>`).join('')}</tr>
+   <tr><th>Категория</th>${xs.map(x=>`<td>${esc(x.cat)}</td>`).join('')}</tr>
+   <tr><th>Цена</th>${xs.map(x=>`<td><b>${x.price?rub(x.price):'по запросу'}</b></td>`).join('')}</tr>
+   <tr><th></th>${xs.map(x=>`<td><button class="btn btn-dark btn-sm" data-add="${x.id}">В корзину</button><br><button class="rm" data-cr="${x.id}">Убрать</button></td>`).join('')}</tr>
+  </table>`;
+  open('#cmpModal');
+}
+$('#cmpBody').addEventListener('click',e=>{
+  const a=e.target.closest('[data-add]');if(a)addCart(+a.dataset.add);
+  const r=e.target.closest('[data-cr]');if(r){toggleCmp(+r.dataset.cr);cmp.length?openCmp():closeAll()}
+});
+
+/* ============== БЫСТРЫЙ ПРОСМОТР ============== */
+let qvId=null;
+function openQV(id){
+  qvId=id;const x=byId(id);
+  $('#qvBody').innerHTML=`<div class="qv"><div class="qv-img"><img src="${img(x.file)}" alt="${esc(x.name)}" referrerpolicy="no-referrer"></div><div class="qv-body">
+   <div class="brand">${esc(x.brand)}</div><h2>${esc(x.name)}</h2><span class="tag new">Новинка</span>
+   ${x.price?`<div class="price">${rub(x.price)}</div>`:`<div class="price rq">Цена по запросу</div>`}
+   <div class="qv-actions"><div class="qty"><button id="qvm">−</button><span id="qvn">1</span><button id="qvp">+</button></div><button class="btn btn-dark" id="qvAdd">Добавить в корзину</button></div>
+   <div class="qv-actions"><button class="btn btn-outline" id="qvOne">Купить в один клик</button><button class="btn btn-outline" id="qvCmp">${cmp.includes(id)?'Убрать из сравнения':'К сравнению'}</button></div>
+   <div class="qv-meta"><div><span>Производитель</span><b>${esc(x.brand)}</b></div><div><span>Артикул</span><b>${esc(x.art||'—')}</b></div><div><span>Категория</span><b>${esc(x.cat)}</b></div></div>
+   <a class="btn btn-soft btn-block" href="#/product/${x.id}" data-close>Подробнее о товаре</a></div></div>`;
+  let n=1;const nn=$('#qvn');
+  $('#qvm').onclick=()=>{n=Math.max(1,n-1);nn.textContent=n};
+  $('#qvp').onclick=()=>{n++;nn.textContent=n};
+  $('#qvAdd').onclick=()=>addCart(id,n);
+  $('#qvCmp').onclick=e=>{toggleCmp(id);e.target.textContent=cmp.includes(id)?'Убрать из сравнения':'К сравнению'};
+  $('#qvOne').onclick=()=>{closeAll();$('#ocItem').textContent=x.name+(x.price?' — '+rub(x.price):'');open('#oneClick')};
+  open('#qvModal');
+}
+$('#ocForm').onsubmit=e=>{e.preventDefault();const x=byId(qvId);
+  const body=`Заявка «Купить в один клик»\nТовар: ${x?x.name:''}\nИмя: ${$('#oc_name').value}\nТелефон: ${$('#oc_phone').value}`;
+  location.href='mailto:irina_shupova@mail.ru?subject='+encodeURIComponent('Купить в один клик')+'&body='+encodeURIComponent(body);toast('Открываем письмо')};
+
+/* ============== ОВЕРЛЕИ ============== */
+const ov=$('#overlay');
+function open(sel){closeAll(true);$(sel).classList.add('on');ov.classList.add('on');document.body.style.overflow='hidden'}
+function closeAll(){$$('.modal.on,.drawer.on').forEach(m=>m.classList.remove('on'));ov.classList.remove('on');document.body.style.overflow='';$('#lb').classList.remove('on')}
+ov.onclick=()=>closeAll();
+document.addEventListener('click',e=>{if(e.target.closest('[data-close]'))closeAll()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeAll();toggleSearch(false)}});
+$('#cartBtn').onclick=()=>{drawCart();open('#cartDrawer')};
+$('#burger').onclick=()=>open('#mobMenu');
+$('#cmpBtn').onclick=openCmp;
+$('#mobMenu').addEventListener('click',e=>{if(e.target.closest('a'))closeAll()});
+
+/* ============== ПОИСК ============== */
+const sp=$('#searchPanel');
+const toggleSearch=f=>{const o=f===undefined?!sp.classList.contains('open'):f;sp.classList.toggle('open',o);if(o)setTimeout(()=>$('#f_name').focus(),300)};
+$('#searchBtn').onclick=()=>toggleSearch();
+$('#spClose').onclick=()=>toggleSearch(false);
+$('#searchForm').onsubmit=e=>{
+  e.preventDefault();
+  const p=new URLSearchParams();
+  const name=$('#f_name').value.trim(), pmin=$('#f_pmin').value, pmax=$('#f_pmax').value, brand=$('#f_brand').value, cat=$('#f_cat').value;
+  if(name)p.set('q',name);
+  if(pmin)p.set('min',pmin);
+  if(pmax)p.set('max',pmax);
+  if(brand)p.set('brand',brand);
+  if(cat)p.set('cat',cat);
+  toggleSearch(false);
+  location.hash='#/catalog'+(p.toString()?'?'+p.toString():'');
+};
+// Заполняем select категорий
+(()=>{const sel=$('#f_cat');if(sel)sel.innerHTML='<option value="">Все</option>'+Object.entries(CAT_SLUGS).map(([k,v])=>`<option value="${k}">${esc(v)}</option>`).join('')})();
+
+/* ============== НАВИГАЦИЯ (шапка) ============== */
+$('#navList').innerHTML=MENU.map(m=>`<li class="nav-item${m.s?' has-sub':''}${m.sale?' sale':''}"><a href="${m.href}">${esc(m.t)}</a>${m.s?`<div class="sub">${m.s.map(s=>`<a class="${s[2]?'head':''}" href="${s[1]}">${esc(s[0])}</a>`).join('')}</div>`:''}</li>`).join('');
+(()=>{
+  const mm=$('#mmBody');
+  mm.innerHTML=MENU.map(m=>m.s?`<details><summary>${esc(m.t)}</summary>${m.s.map(s=>`<a href="${s[1]}">${esc(s[0])}</a>`).join('')}</details>`:`<a class="${m.sale?'sale':''}" href="${m.href}">${esc(m.t)}</a>`).join('')+
+   ['О компании|#/about','Доставка и оплата|#/delivery','Контакты|#/contacts','Личный кабинет|#/account'].map(x=>{const[a,b]=x.split('|');return `<a href="${b}" style="color:var(--mute);font-weight:500">${a}</a>`}).join('');
+})();
+
+/* ============== ФИЛЬТРАЦИЯ ============== */
+function filterItems(params){
+  let r=items.slice();
+  const q=params.get('q'),cat=params.get('cat'),brand=params.get('brand');
+  const min=+params.get('min')||0, max=+params.get('max')||0;
+  const sort=params.get('sort')||'def';
+  if(cat&&CAT_SLUGS[cat]) r=r.filter(x=>x.cat===CAT_SLUGS[cat]);
+  if(brand&&BRAND_SLUGS[brand]) r=r.filter(x=>x.brand===BRAND_SLUGS[brand]);
+  if(q){const ql=q.toLowerCase();r=r.filter(x=>x.name.toLowerCase().includes(ql)||x.art.toLowerCase().includes(ql))}
+  if(min)r=r.filter(x=>x.price&&x.price>=min);
+  if(max)r=r.filter(x=>x.price&&x.price<=max);
+  if(sort==='asc')r.sort((a,b)=>(a.price||9e9)-(b.price||9e9));
+  if(sort==='desc')r.sort((a,b)=>(b.price||-1)-(a.price||-1));
+  if(sort==='name')r.sort((a,b)=>a.name.localeCompare(b.name,'ru'));
+  return r;
+}
+
+/* ============== СТРАНИЦЫ ============== */
+
+/* --- ГЛАВНАЯ --- */
+function PageHome(){
+  setPage('Главная',`
+   <div class="hero" id="hero">
+     <div class="slides" id="slides"></div>
+     <div class="hero-nav">
+       <button id="hPrev" aria-label="Назад"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></button>
+       <button id="hNext" aria-label="Вперёд"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></button>
+     </div>
+     <div class="dots" id="dots"></div>
+   </div>
+   <div class="benefits"><div class="wrap ben-grid">
+     <div class="ben"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg><div><b>Бесплатная доставка</b><span>по всей России</span></div></div>
+     <div class="ben"><svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg><div><b>Оригинальная Италия</b><span>Sarah Pacini · TRANSIT</span></div></div>
+     <div class="ben"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9.5 5 2.5-5 2.5z"/></svg><div><b>Видеообзор коллекций</b><span>по вашему запросу</span></div></div>
+     <div class="ben"><svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Примерка в бутике</b><span>Екатеринбург</span></div></div>
+   </div></div>
+   <section>
+     <div class="wrap">
+       <div class="sec-head"><div><div class="eyebrow">Каталог</div><h2>Выберите своё</h2></div><a class="btn btn-outline btn-sm" href="#/catalog">Смотреть всё</a></div>
+       <div class="cats">${CATS.map(c=>`<a class="cat" href="${c[1]}"><img src="${img(c[2])}" alt="${esc(c[0])}" loading="lazy" referrerpolicy="no-referrer"><div><h3>${esc(c[0])}</h3><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>`).join('')}</div>
+     </div>
+   </section>
+   <section style="padding-top:0">
+     <div class="wrap">
+       <div class="sec-head"><div><div class="eyebrow">Новая коллекция</div><h2>Новинки</h2></div><a class="btn btn-outline btn-sm" href="#/catalog">Весь каталог</a></div>
+       <div class="notice"><p><b>Уважаемые покупатели!</b> В бутике представлен большой ассортимент одежды производства Италия. На сайте показаны не все модели — приглашаем в магазин. Также мы можем провести <b>видеообзор</b> интересующих вас коллекций.</p><a class="btn btn-dark" href="#/contacts">Заказать видеообзор</a></div>
+       <div class="grid">${items.slice(0,8).map(ProductCard).join('')}</div>
+     </div>
+   </section>
+   <section class="brands">
+     <div class="wrap br-grid">
+       <div class="br-text">
+         <div class="eyebrow">Бренды</div>
+         <h2>Комфорт и стиль от бутика Sarah Pacini</h2>
+         <p>В нашем бутике женской одежды вы найдёте итальянские бренды Sarah Pacini и TRANSIT. Примерить и приобрести вещи можно в магазине, также мы осуществляем доставку по всей России.</p>
+         <p>Sarah Pacini — бельгийская марка с итальянской душой. Философия бренда — «одежда как отражение души» — проявляется в изящных коллекциях благодаря уникальному сочетанию дорогих тканей и сдержанных цветовых решений.</p>
+         <div class="br-list">
+           <a class="br-card" href="#/catalog?brand=sarah-pacini"><img data-src="logo-white.jpg" alt="Sarah Pacini"></a>
+           <a class="br-card" href="#/catalog?brand=transit"><img data-src="logotip1.jpg" alt="TRANSIT"></a>
+         </div>
+         <div class="br-links">
+           <a class="btn btn-soft" href="#/catalog?brand=sarah-pacini">Sarah Pacini</a>
+           <a class="btn btn-w-outline" href="#/catalog?brand=transit">TRANSIT</a>
+           <a class="btn btn-w-outline" href="#/brands">Все бренды</a>
+         </div>
+       </div>
+       <div class="br-photos">
+         <img data-src="frame_71.jpg" alt="Sarah Pacini">
+         <img data-src="h3_06.jpg" alt="Sarah Pacini">
+       </div>
+     </div>
+   </section>
+   <section>
+     <div class="wrap">
+       <div class="sec-head"><div><div class="eyebrow">Вдохновение</div><h2>Любимые образы</h2><p>Готовые сочетания из наших коллекций — вещи, которые легко комбинировать.</p></div><a class="btn btn-outline btn-sm" href="#/looks">Все образы</a></div>
+       <div class="looks">${LOOKS.slice(0,8).map((f,i)=>`<a class="look" href="${img(f)}" data-look="${i}"><img src="${img(f)}" alt="Образ ${i+1}" loading="lazy" referrerpolicy="no-referrer"></a>`).join('')}</div>
+     </div>
+   </section>
+  `);
+  // Hero slider
+  const slidesEl=$('#slides'),dotsEl=$('#dots');
+  slidesEl.innerHTML=SLIDES.map((s,i)=>`<a class="slide${i?'':' on'}" href="${s[3]}"><img src="${img(s[0])}" alt="${esc(s[1])}" referrerpolicy="no-referrer" ${i?'loading="lazy"':''}><div class="cap"><div class="eyebrow">${esc(s[2])}</div><h2>${esc(s[1])}</h2><span class="btn btn-soft">${esc(s[4])}</span></div></a>`).join('');
+  dotsEl.innerHTML=SLIDES.map((_,i)=>`<button class="${i?'':'on'}" data-i="${i}"></button>`).join('');
+  let cur=0,timer;
+  const go=i=>{cur=(i+SLIDES.length)%SLIDES.length;$$('.slide',slidesEl).forEach((el,k)=>el.classList.toggle('on',k===cur));$$('button',dotsEl).forEach((el,k)=>el.classList.toggle('on',k===cur));restart()};
+  const restart=()=>{clearInterval(timer);timer=setInterval(()=>go(cur+1),6500)};
+  $('#hPrev').onclick=()=>go(cur-1);$('#hNext').onclick=()=>go(cur+1);
+  dotsEl.onclick=e=>{const b=e.target.closest('button');if(b)go(+b.dataset.i)};
+  restart();
+  // Карточки товаров
+  $('#app').addEventListener('click',cardClickHandler);
+  // Лайтбокс луков
+  bindLooks();
+}
+
+/* --- КАТАЛОГ --- */
+function PageCatalog(ctx){
+  const p=ctx.params;
+  const cat=p.get('cat')||'', brand=p.get('brand')||'', q=p.get('q')||'';
+  const sort=p.get('sort')||'def', page=Math.max(1,+p.get('page')||1);
+  const perPage=12;
+  const list=filterItems(p);
+  const totalPages=Math.max(1,Math.ceil(list.length/perPage));
+  const visible=list.slice((page-1)*perPage,page*perPage);
+  const title=cat&&CAT_SLUGS[cat]?CAT_SLUGS[cat]:(brand&&BRAND_SLUGS[brand]?BRAND_SLUGS[brand]:'Каталог одежды');
+  const crumbs=[[ 'Главная','#/' ],['Каталог','#/catalog']];
+  if(cat&&CAT_SLUGS[cat])crumbs.push([CAT_SLUGS[cat],'']);
+  else if(brand&&BRAND_SLUGS[brand])crumbs.push([BRAND_SLUGS[brand],'']);
+
+  setPage(title,`
+   ${Breadcrumbs(crumbs)}
+   <div class="wrap"><div class="cat-layout">
+     <aside class="cat-sidebar">
+       <div class="filter-block">
+         <h4>Категории</h4>
+         <a href="#/catalog" class="${!cat?'on':''}">Все товары</a>
+         ${Object.entries(CAT_SLUGS).map(([k,v])=>`<a href="#/catalog?cat=${k}${brand?'&brand='+brand:''}" class="${cat===k?'on':''}">${esc(v)}</a>`).join('')}
+       </div>
+       <div class="filter-block">
+         <h4>Бренд</h4>
+         <a href="#/catalog${cat?'?cat='+cat:''}" class="${!brand?'on':''}">Все бренды</a>
+         <a href="#/catalog?brand=sarah-pacini${cat?'&cat='+cat:''}" class="${brand==='sarah-pacini'?'on':''}">Sarah Pacini</a>
+         <a href="#/catalog?brand=transit${cat?'&cat='+cat:''}" class="${brand==='transit'?'on':''}">TRANSIT</a>
+       </div>
+       <div class="filter-block">
+         <h4>Цена, ₽</h4>
+         <div class="price-range">
+           <input id="priceMin" type="number" placeholder="от" min="0" value="${p.get('min')||''}">
+           <input id="priceMax" type="number" placeholder="до" min="0" value="${p.get('max')||''}">
+         </div>
+         <button class="btn btn-outline btn-sm btn-block" id="applyPrice">Применить</button>
+       </div>
+     </aside>
+     <div>
+       <div class="cat-toolbar">
+         <span class="count">Найдено: <b>${list.length}</b></span>
+         <select id="catSort">
+           <option value="def"${sort==='def'?' selected':''}>По умолчанию</option>
+           <option value="asc"${sort==='asc'?' selected':''}>Сначала дешевле</option>
+           <option value="desc"${sort==='desc'?' selected':''}>Сначала дороже</option>
+           <option value="name"${sort==='name'?' selected':''}>По названию</option>
+         </select>
+       </div>
+       ${visible.length?`<div class="grid">${visible.map(ProductCard).join('')}</div>`:'<div class="empty"><h3 style="font-family:var(--serif);font-size:30px;margin-bottom:8px">Ничего не найдено</h3><p>Попробуйте изменить фильтры.</p></div>'}
+       ${totalPages>1?`<div class="pagination">${Array.from({length:totalPages},(_,i)=>i+1).map(n=>{
+         const np=new URLSearchParams(p);np.set('page',n);
+         return `<button data-page="${n}" class="${n===page?'on':''}">${n}</button>`
+       }).join('')}</div>`:''}
+     </div>
+   </div></div>
+  `);
+
+  $('#catSort').onchange=e=>{p.set('sort',e.target.value);p.set('page','1');location.hash='#/catalog?'+p.toString()};
+  $('#applyPrice').onclick=()=>{
+    const min=$('#priceMin').value, max=$('#priceMax').value;
+    if(min)p.set('min',min);else p.delete('min');
+    if(max)p.set('max',max);else p.delete('max');
+    p.set('page','1');
+    location.hash='#/catalog?'+p.toString();
+  };
+  $('#app').addEventListener('click',cardClickHandler);
+  $$('.pagination button').forEach(b=>{
+    b.onclick=()=>{p.set('page',b.dataset.page);location.hash='#/catalog?'+p.toString()};
+  });
+}
+
+/* --- СТРАНИЦА ТОВАРА --- */
+function PageProduct(id){
+  const x=byId(+id);
+  if(!x)return Page404();
+  setPage(x.name,`
+   ${Breadcrumbs([['Главная','#/'],['Каталог','#/catalog'],[x.cat,'#/catalog'], [x.name,'']])}
+   <div class="wrap"><div class="product-layout">
+     <div class="gallery">
+       <div class="gallery-main"><img id="gMain" src="${img(x.gallery[0])}" alt="${esc(x.name)}" referrerpolicy="no-referrer"></div>
+       <div class="gallery-thumbs">${x.gallery.map((f,i)=>`<img src="${img(f)}" alt="" data-gi="${i}" class="${i===0?'on':''}" referrerpolicy="no-referrer">`).join('')}</div>
+     </div>
+     <div class="product-info">
+       <div class="brand">${esc(x.brand)}</div>
+       <h1>${esc(x.name)}</h1>
+       <span class="tag new">Новинка</span>
+       <div class="product-price">${x.price?rub(x.price):'<small>Цена по запросу — уточните у менеджера</small>'}</div>
+       <div class="sizes-label"><span>Размер</span><a href="#/delivery">Таблица размеров</a></div>
+       <div class="sizes" id="sizesBox">${SIZES.map(s=>{
+         const available=x.sizes.includes(s);
+         return `<button class="size-btn" data-size="${s}" ${available?'':'disabled'}>${s}</button>`;
+       }).join('')}</div>
+       <div class="product-actions">
+         <button class="btn btn-dark" id="pAdd">Добавить в корзину</button>
+         <button class="btn btn-outline" id="pOne">Купить в один клик</button>
+       </div>
+       <div class="product-actions">
+         <button class="btn btn-soft btn-sm" id="pCmp">${cmp.includes(x.id)?'Убрать из сравнения':'Добавить к сравнению'}</button>
+       </div>
+       <div class="accordion">
+         <details open><summary>Описание</summary><div class="acc-body">${esc(x.desc)}</div></details>
+         <details><summary>Характеристики</summary><div class="acc-body specs">
+           <div><span>Бренд</span><b>${esc(x.brand)}</b></div>
+           <div><span>Артикул</span><b>${esc(x.art||'—')}</b></div>
+           <div><span>Категория</span><b>${esc(x.cat)}</b></div>
+           <div><span>Состав</span><b>${esc(x.composition)}</b></div>
+           <div><span>Страна производства</span><b>Италия</b></div>
+           <div><span>Уход</span><b>Деликатная стирка при 30°</b></div>
+         </div></details>
+         <details><summary>Доставка и оплата</summary><div class="acc-body">
+           <p style="margin-bottom:10px"><b>Доставка по России</b> — бесплатно. Сроки уточняйте у менеджера.</p>
+           <p style="margin-bottom:10px"><b>Самовывоз</b> — Екатеринбург, ул. Посадская, 28а, ТЦ «Универбыт», 2 этаж, бутик №200.</p>
+           <p>Подробнее — <a href="#/delivery" style="color:var(--accent);font-weight:600">Доставка и оплата</a>.</p>
+         </div></details>
+         <details><summary>Возврат и обмен</summary><div class="acc-body">
+           <p>В течение 14 дней после покупки при сохранении бирок и товарного вида. Подробнее уточняйте по телефону.</p>
+         </div></details>
+       </div>
+     </div>
+   </div></div>
+   <section style="background:var(--bg-soft)">
+     <div class="wrap">
+       <div class="sec-head"><div><div class="eyebrow">Смотрите также</div><h2>Похожие модели</h2></div></div>
+       <div class="grid">${items.filter(o=>o.cat===x.cat&&o.id!==x.id).slice(0,3).map(ProductCard).join('')||items.filter(o=>o.id!==x.id).slice(0,3).map(ProductCard).join('')}</div>
+     </div>
+   </section>
+  `);
+  // Галерея
+  $$('.gallery-thumbs img').forEach(im=>{
+    im.onclick=()=>{
+      $$('.gallery-thumbs img').forEach(i=>i.classList.remove('on'));
+      im.classList.add('on');
+      $('#gMain').src=im.src;
+    }
+  });
+  // Размеры
+  let selSize=null;
+  $$('.size-btn').forEach(b=>{
+    if(b.disabled)return;
+    b.onclick=()=>{
+      $$('.size-btn').forEach(s=>s.classList.remove('on'));
+      b.classList.add('on');selSize=b.dataset.size;
+    }
+  });
+  $('#pAdd').onclick=()=>{
+    if(!x.sizes.length){addCart(x.id);return}
+    if(!selSize){toast('Выберите размер');return}
+    addCart(x.id);
+  };
+  $('#pOne').onclick=()=>{$('#ocItem').textContent=x.name+(x.price?' — '+rub(x.price):'');open('#oneClick')};
+  $('#pCmp').onclick=e=>{toggleCmp(x.id);e.target.textContent=cmp.includes(x.id)?'Убрать из сравнения':'Добавить к сравнению'};
+  $('#app').addEventListener('click',cardClickHandler);
+}
+
+/* --- КОРЗИНА --- */
+function PageCart(){
+  const ids=Object.keys(cart).filter(k=>byId(k));
+  if(!ids.length){
+    setPage('Корзина',`${Breadcrumbs([['Главная','#/'],['Корзина','']])}
+      <div class="wrap" style="padding:32px 28px 88px">
+        <div class="cart-empty">
+          <svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <h3>Корзина пуста</h3><p>Добавьте товары из каталога, чтобы оформить заказ.</p>
+          <a class="btn btn-dark" href="#/catalog">Перейти в каталог</a>
+        </div>
+      </div>`);
+    return;
+  }
+  let sum=0,rq=false;
+  const rows=ids.map(k=>{
+    const x=byId(k),q=cart[k];
+    if(x.price)sum+=x.price*q;else rq=true;
+    return `<div class="cart-row" data-id="${k}">
+      <img src="${img(x.file)}" alt="" referrerpolicy="no-referrer">
+      <div>
+        <h4><a href="#/product/${x.id}">${esc(x.name)}</a></h4>
+        <div class="art">${esc(x.brand)} · Арт. ${esc(x.art||'—')}</div>
+        <div class="qty"><button data-cart-q="-1" data-id="${k}">−</button><span>${q}</span><button data-cart-q="1" data-id="${k}">+</button></div>
+      </div>
+      <div class="line-total" style="text-align:right"><b>${x.price?rub(x.price*q):'по запросу'}</b></div>
+      <div class="line-actions"><button class="rm" data-cart-rm="${k}">Удалить</button></div>
+    </div>`;
+  }).join('');
+  setPage('Корзина',`${Breadcrumbs([['Главная','#/'],['Корзина','']])}
+    <div class="wrap"><div class="cart-layout">
+      <div>
+        <div class="cart-table">${rows}</div>
+        <a href="#/catalog" style="display:inline-block;margin-top:20px;font-size:14px;color:var(--accent);font-weight:600">← Продолжить покупки</a>
+      </div>
+      <div class="cart-summary">
+        <h3>Итого</h3>
+        <div class="sum-line"><span>Товаров</span><span>${ids.reduce((s,k)=>s+cart[k],0)}</span></div>
+        <div class="sum-line"><span>Доставка</span><span>Бесплатно</span></div>
+        ${rq?'<div class="sum-line"><span style="color:var(--accent)">Часть позиций — по запросу</span><span>—</span></div>':''}
+        <div class="sum-line total"><span>К оплате</span><span>${rub(sum)}${rq?' +':''}</span></div>
+        <a class="btn btn-dark btn-block" href="#/checkout">Оформить заказ</a>
+        <p style="margin-top:16px;font-size:12px;color:var(--mute)">Оплата и доставка обсуждаются с менеджером после оформления.</p>
+      </div>
+    </div></div>
+  `);
+  $('#app').addEventListener('click',e=>{
+    const q=e.target.closest('[data-cart-q]');
+    if(q){const id=q.dataset.id;cart[id]+=+q.dataset.cartQ;if(cart[id]<1)delete cart[id];saveCart();PageCart();drawCart()}
+    const r=e.target.closest('[data-cart-rm]');
+    if(r){delete cart[r.dataset.cartRm];saveCart();PageCart();drawCart()}
+  });
+}
+
+/* --- ЧЕКАУТ --- */
+function PageCheckout(){
+  const ids=Object.keys(cart).filter(k=>byId(k));
+  if(!ids.length){location.hash='#/cart';return}
+  let sum=0,rq=false;
+  const rows=ids.map(k=>{
+    const x=byId(k),q=cart[k];
+    if(x.price)sum+=x.price*q;else rq=true;
+    return `<div class="sum-line"><span>${esc(x.name)} × ${q}</span><span>${x.price?rub(x.price*q):'по запросу'}</span></div>`;
+  }).join('');
+  setPage('Оформление заказа',`${Breadcrumbs([['Главная','#/'],['Корзина','#/cart'],['Оформление','']])}
+    <div class="wrap"><div class="co-layout">
+      <div>
+        <form id="coFormFull">
+          <div class="co-section">
+            <h3>Контактные данные</h3>
+            <div class="form-grid">
+              <div class="fld"><label>Имя*</label><input id="co_name" required></div>
+              <div class="fld"><label>Фамилия</label><input id="co_last"></div>
+              <div class="fld"><label>Телефон*</label><input id="co_phone" type="tel" required placeholder="+7"></div>
+              <div class="fld"><label>E-mail</label><input id="co_email" type="email"></div>
+            </div>
+          </div>
+          <div class="co-section">
+            <h3>Способ доставки</h3>
+            <label class="opt on"><input type="radio" name="del" value="pickup" checked><div><b>Самовывоз из бутика</b><small>Екатеринбург, ул. Посадская, 28а, ТЦ «Универбыт», 2 этаж, бутик №200</small></div></label>
+            <label class="opt"><input type="radio" name="del" value="cdek"><div><b>СДЭК по России</b><small>Бесплатно. 2–5 дней</small></div></label>
+            <label class="opt"><input type="radio" name="del" value="post"><div><b>Почта России</b><small>Бесплатно. 5–12 дней</small></div></label>
+            <div class="fld" style="margin-top:16px"><label>Адрес доставки (если не самовывоз)</label><input id="co_address" placeholder="Город, улица, дом, квартира"></div>
+            <div class="fld"><label>Комментарий к заказу</label><textarea id="co_note" rows="3" placeholder="Размер, цвет, пожелания"></textarea></div>
+          </div>
+          <div class="co-section">
+            <h3>Оплата</h3>
+            <label class="opt on"><input type="radio" name="pay" value="card" checked><div><b>Банковской картой</b><small>Ссылку пришлём после подтверждения</small></div></label>
+            <label class="opt"><input type="radio" name="pay" value="cash"><div><b>Наличными в бутике</b><small>При самовывозе</small></div></label>
+            <label class="opt"><input type="radio" name="pay" value="transfer"><div><b>Перевод на карту</b><small>Реквизиты пришлём в мессенджере</small></div></label>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button type="submit" class="btn btn-dark" style="flex:1">Подтвердить заказ</button>
+            <button type="button" class="btn btn-outline" id="coCopyBtn">Скопировать заказ</button>
+          </div>
+          <div class="msgrs"><a class="msg tg" href="https://t.me/+9qPt_0Mn9gw2MGFi" target="_blank" rel="noopener">Написать в Telegram</a><a class="msg mx" href="https://max.ru/u/f9LHodD0cOJoU7f1neCyUfe7MM_fpaE9rcEw2Eq0jK_FXXeBC4DmUqIfuSA" target="_blank" rel="noopener">Написать в MAX</a></div>
+        </form>
+      </div>
+      <div class="cart-summary">
+        <h3>Ваш заказ</h3>
+        ${rows}
+        <div class="sum-line"><span>Доставка</span><span>Бесплатно</span></div>
+        <div class="sum-line total"><span>Итого</span><span>${rub(sum)}${rq?' +':''}</span></div>
+        <a class="btn btn-outline btn-block" href="#/cart" style="margin-top:8px">Изменить корзину</a>
+      </div>
+    </div></div>
+  `);
+  // Переключение опций
+  $$('.opt input').forEach(r=>{
+    r.onchange=()=>{
+      const name=r.name;$$(`input[name="${name}"]`).forEach(o=>o.closest('.opt').classList.remove('on'));
+      r.closest('.opt').classList.add('on');
+    }
+  });
+  const buildOrder=()=>{
+    let body='Заказ с сайта Sarah Pacini:\n';
+    ids.forEach(k=>{const x=byId(k);body+=`• ${x.name} × ${cart[k]} — ${x.price?rub(x.price*cart[k]):'цена по запросу'}\n`});
+    body+=`\nИтого: ${rub(sum)}${rq?' + (часть по запросу)':''}\n`;
+    body+=`\nИмя: ${$('#co_name').value} ${$('#co_last').value}\nТелефон: ${$('#co_phone').value}\nE-mail: ${$('#co_email').value}\n`;
+    body+=`Доставка: ${$('input[name="del"]:checked').value}\nАдрес: ${$('#co_address').value}\n`;
+    body+=`Оплата: ${$('input[name="pay"]:checked').value}\nКомментарий: ${$('#co_note').value}`;
+    return body;
+  };
+  $('#coFormFull').onsubmit=e=>{
+    e.preventDefault();
+    location.href='mailto:irina_shupova@mail.ru?subject='+encodeURIComponent('Заказ с сайта')+'&body='+encodeURIComponent(buildOrder());
+    toast('Открываем письмо с заказом');
+  };
+  $('#coCopyBtn').onclick=async()=>{
+    try{await navigator.clipboard.writeText(buildOrder());toast('Заказ скопирован')}
+    catch(e){toast('Не удалось скопировать')}
+  };
+}
+
+/* --- ОБРАЗЫ --- */
+function PageLooks(){
+  setPage('Образы',`${Breadcrumbs([['Главная','#/'],['Образы','']])}
+    <div class="wrap"><div class="sec-head" style="padding-top:32px"><div><div class="eyebrow">Вдохновение</div><h2>Любимые образы</h2><p>Готовые сочетания из наших коллекций — вещи, которые легко комбинировать и всегда выглядеть по-разному.</p></div></div>
+      <div class="looks">${LOOKS.map((f,i)=>`<a class="look" href="${img(f)}" data-look="${i}"><img src="${img(f)}" alt="Образ ${i+1}" loading="lazy" referrerpolicy="no-referrer"></a>`).join('')}</div>
+    </div>`);
+  bindLooks();
+}
+
+/* --- О КОМПАНИИ --- */
+function PageAbout(){
+  setPage('О компании',`
+    <div class="hero-mini">
+      <div class="eyebrow">О нас</div>
+      <h1>Бутик Sarah Pacini в Екатеринбурге</h1>
+      <p>Итальянская одежда с бельгийским характером. Мы работаем с 2017 года и любим то, что делаем.</p>
+    </div>
+    <div class="wrap"><div class="info-page">
+      <h2>Наша история</h2>
+      <p>Бутик Sarah Pacini открылся в Екатеринбурге в 2017 году. С первого дня наша цель — привозить в город одежду, которую не встретишь в масс-маркете: с характером, из благородных тканей и с идеальной посадкой.</p>
+      <p>Мы работаем напрямую с итальянскими поставщиками и бельгийским офисом Sarah Pacini. Каждая коллекция отбирается лично: сначала мы смотрим ткани и посадку на показах, затем привозим ограниченный тираж в бутик.</p>
+
+      <h2>Что мы продаём</h2>
+      <p>В нашем бутике представлены:</p>
+      <ul>
+        <li><b>Sarah Pacini</b> — бельгийская марка с итальянским производством. Узнаваемый минимализм, асимметрия, layered-образы, дорогой трикотаж и палантины.</li>
+        <li><b>TRANSIT</b> — итальянская марка с акцентом на натуральные ткани: лён, хлопок, шёлк. Практичные вещи на каждый день.</li>
+        <li><b>Европейская культура</b> — коллекции европейских брендов, отобранные для нашего бутика.</li>
+        <li><b>Аксессуары</b> — палантины, шарфы, украшения, сумки и ремни.</li>
+      </ul>
+
+      <h2>Наш подход</h2>
+      <p>Мы не продаём «просто одежду». Мы помогаем собрать гардероб, в котором вещи сочетаются друг с другом и работают на вас годами. Приходите в бутик — мы всегда рады помочь с выбором, показать разные сочетания и подобрать размер.</p>
+
+      <h2>Доставка по всей России</h2>
+      <p>Если вы не в Екатеринбурге — мы отправим заказ СДЭКом или Почтой России. Доставка бесплатная. Перед отправкой согласуем с вами все детали в мессенджере или по телефону.</p>
+
+      <h2>Контакты</h2>
+      <p>Екатеринбург, ул. Посадская, 28а, ТЦ «Универбыт», 2 этаж, бутик №200.<br>
+      Телефон: <a href="tel:+79126643006" style="color:var(--accent)">+7 (912) 664-30-06</a><br>
+      Ежедневно с 10:00 до 20:00.</p>
+    </div></div>
+  `);
+}
+
+/* --- БРЕНДЫ --- */
+function PageBrands(){
+  const brands=[
+    {name:'Sarah Pacini',slug:'sarah-pacini',logo:'logo-white.jpg',desc:'Бельгийская марка с итальянским производством. Узнаваемый минимализм, асимметрия, layered-образы и дорогой трикотаж. Коллекции вне времени и сезонов.'},
+    {name:'TRANSIT',slug:'transit',logo:'logotip1.jpg',desc:'Итальянская марка с акцентом на натуральные ткани: лён, хлопок, шёлк. Практичные вещи на каждый день с безупречной посадкой.'},
+    {name:'ANNETTE GORTZ',slug:'annette-gortz',logo:null,desc:'Немецкий бренд с узнаваемым авангардным кроем. Смелые силуэты и необычные сочетания тканей для тех, кто не боится экспериментировать.'},
+    {name:'KristenseN du Nord',slug:'kristensen',logo:null,desc:'Скандинавский бренд с минималистичным дизайном. Чистые линии, спокойные цвета и премиальные материалы.'},
+    {name:'Европейская культура',slug:'evropejskaya-kultura',logo:null,desc:'Коллекции европейских марок, отобранные для нашего бутика. Каждая вещь — с историей и характером.'}
+  ];
+  setPage('Бренды',`
+    <div class="hero-mini">
+      <div class="eyebrow">Бренды</div>
+      <h1>Марки, с которыми мы работаем</h1>
+      <p>Прямые поставки из Италии, Бельгии и Скандинавии. Каждая коллекция отбирается лично.</p>
+    </div>
+    <div class="wrap"><div class="info-page">
+      ${brands.map(b=>`<div style="display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:center;padding:32px 0;border-bottom:1px solid var(--line)">
+        <div>${b.logo?`<img src="${img(b.logo)}" alt="${esc(b.name)}" style="max-height:80px;object-fit:contain;margin:0 auto" referrerpolicy="no-referrer">`:`<div style="width:100%;aspect-ratio:2/1;background:var(--bg-soft);border-radius:12px;display:grid;place-items:center;font-family:var(--serif);font-size:22px;color:var(--mute);text-align:center;padding:12px">${esc(b.name)}</div>`}</div>
+        <div>
+          <h2 style="margin:0 0 8px">${esc(b.name)}</h2>
+          <p style="margin-bottom:12px">${esc(b.desc)}</p>
+          <a class="btn btn-outline btn-sm" href="#/catalog?brand=${b.slug}">Смотреть коллекцию →</a>
+        </div>
+      </div>`).join('')}
+    </div></div>
+  `);
+}
+
+/* --- КОНТАКТЫ --- */
+function PageContacts(){
+  setPage('Контакты',`
+    <div class="hero-mini">
+      <div class="eyebrow">Контакты</div>
+      <h1>Заходите в бутик</h1>
+      <p>Примерьте вещи вживую, посмотрите разные сочетания и подберите размер вместе с нами.</p>
+    </div>
+    <div class="wrap"><div class="v-grid" style="padding:0 0 88px">
+      <div class="v-box">
+        <div class="eyebrow">Связаться</div>
+        <h2>Наш бутик в Екатеринбурге</h2>
+        <div class="v-row"><svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><small>Адрес</small><b>г. Екатеринбург, ул. Посадская, 28а, ТЦ «Универбыт», 2 этаж, бутик №200</b></div></div>
+        <div class="v-row"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><small>Режим работы</small><b>Ежедневно с 10:00 до 20:00</b></div></div>
+        <div class="v-row"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><div><small>Телефон</small><a href="tel:+79126643006">+7 (912) 664-30-06</a></div></div>
+        <div class="v-row"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><small>E-mail</small><a href="mailto:irina_shupova@mail.ru">irina_shupova@mail.ru</a></div></div>
+        <div class="msgrs">
+          <a class="msg tg" href="https://t.me/+9qPt_0Mn9gw2MGFi" target="_blank" rel="noopener"><img data-src="telegram_logosvg.png" alt="">Telegram</a>
+          <a class="msg mx" href="https://max.ru/u/f9LHodD0cOJoU7f1neCyUfe7MM_fpaE9rcEw2Eq0jK_FXXeBC4DmUqIfuSA" target="_blank" rel="noopener"><img data-src="max-messenger-sign-l.svg" alt="">MAX</a>
+          <a class="msg ig" href="https://www.instagram.com/sarah_pacini_ekb/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="v-box">
+        <div class="eyebrow">Напишите нам</div>
+        <h3 style="font-family:var(--serif);font-size:26px;margin-bottom:6px">Уточнить наличие и размер</h3>
+        <p style="color:var(--mute);font-size:14px;margin-bottom:20px">Одежда продаётся в нескольких экземплярах. Напишите — мы подскажем по наличию, размерам и цветам.</p>
+        <form id="contactForm">
+          <div class="fld"><label>Ваше имя</label><input id="c_name" required></div>
+          <div class="fld"><label>Телефон или e-mail</label><input id="c_phone" required></div>
+          <div class="fld"><label>Сообщение</label><textarea id="c_msg" placeholder="Какая модель вас интересует?"></textarea></div>
+          <button class="btn btn-dark btn-block" type="submit">Отправить сообщение</button>
+        </form>
+      </div>
+    </div>
+    <div class="wrap" style="padding-bottom:88px">
+      <div class="map-wrap"><iframe src="https://yandex.ru/map-widget/v1/?text=%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3%2C%20%D0%9F%D0%BE%D1%81%D0%B0%D0%B4%D1%81%D0%BA%D0%B0%D1%8F%2028%D0%B0&z=16" loading="lazy"></iframe></div>
+    </div></div>
+  `);
+  $('#contactForm').onsubmit=e=>{
+    e.preventDefault();
+    const body=`Имя: ${$('#c_name').value}\nКонтакт: ${$('#c_phone').value}\n\n${$('#c_msg').value}`;
+    location.href='mailto:irina_shupova@mail.ru?subject='+encodeURIComponent('Сообщение с сайта Sarah Pacini')+'&body='+encodeURIComponent(body);
+  };
+}
+
+/* --- ДОСТАВКА --- */
+function PageDelivery(){
+  setPage('Доставка и оплата',`
+    <div class="hero-mini">
+      <div class="eyebrow">Сервис</div>
+      <h1>Доставка и оплата</h1>
+      <p>Бесплатная доставка по всей России. Примерка в бутике — бесплатно, без обязательств.</p>
+    </div>
+    <div class="wrap"><div class="info-page">
+      <h2>Доставка</h2>
+      <h3>Самовывоз из бутика</h3>
+      <p>Заберите заказ в нашем бутике в Екатеринбурге: ул. Посадская, 28а, ТЦ «Универбыт», 2 этаж, бутик №200. Ежедневно с 10:00 до 20:00. Перед приездом лучше позвонить и уточнить наличие.</p>
+
+      <h3>СДЭК по России</h3>
+      <p>Доставка до пункта выдачи или курьером до двери. Срок 2–5 дней в зависимости от региона. Стоимость — бесплатно.</p>
+
+      <h3>Почта России</h3>
+      <p>Доставка в любой населённый пункт РФ. Срок 5–12 дней. Стоимость — бесплатно.</p>
+
+      <h2>Оплата</h2>
+      <h3>Банковской картой</h3>
+      <p>После подтверждения заказа мы пришлём ссылку на оплату. Принимаем Visa, Mastercard, МИР.</p>
+
+      <h3>Наличными в бутике</h3>
+      <p>При самовывозе из бутика. Возможна оплата картой через терминал.</p>
+
+      <h3>Перевод на карту</h3>
+      <p>Реквизиты пришлём в мессенджере после подтверждения заказа. Доставка осуществляется после поступления средств.</p>
+
+      <h2>Возврат и обмен</h2>
+      <p>В соответствии с законом «О защите прав потребителей» вы можете вернуть или обменять товар надлежащего качества в течение 14 дней с момента покупки. Условия: сохранены бирки, товарный вид и упаковка, товар не был в использовании.</p>
+      <p>По вопросам возврата свяжитесь с нами по телефону <a href="tel:+79126643006" style="color:var(--accent)">+7 (912) 664-30-06</a> или напишите на <a href="mailto:irina_shupova@mail.ru" style="color:var(--accent)">irina_shupova@mail.ru</a>.</p>
+
+      <h2>Вопросы</h2>
+      <p>Если у вас остались вопросы — <a href="#/contacts" style="color:var(--accent);font-weight:600">напишите нам</a>, позвоните или напишите в Telegram / MAX. Мы всегда рады помочь.</p>
+    </div></div>
+  `);
+}
+
+/* --- РАСПРОДАЖА --- */
+function PageSale(){
+  const list=items.filter(x=>x.price).sort((a,b)=>(a.price||9e9)-(b.price||9e9));
+  setPage('Распродажа',`${Breadcrumbs([['Главная','#/'],['Распродажа','']])}
+    <div class="hero-mini" style="margin-top:24px">
+      <div class="eyebrow">Sale</div>
+      <h1>Распродажа</h1>
+      <p>Последние размеры и архивные модели. Скидки до 50%.</p>
+    </div>
+    <div class="wrap" style="padding-bottom:88px">
+      <div class="grid">${list.map(ProductCard).join('')||'<div class="empty">Пока нет товаров</div>'}</div>
+    </div>
+  `);
+  $('#app').addEventListener('click',cardClickHandler);
+}
+
+/* --- ПОИСК (страница) --- */
+function PageSearch(ctx){
+  const q=ctx.params.get('q')||'';
+  const list=q?items.filter(x=>x.name.toLowerCase().includes(q.toLowerCase())||x.art.toLowerCase().includes(q.toLowerCase())):[];
+  setPage('Поиск: '+q,`${Breadcrumbs([['Главная','#/'],['Поиск','']])}
+    <div class="wrap" style="padding:32px 28px 88px">
+      <h1 style="font-family:var(--serif);font-size:38px;margin-bottom:8px">Поиск</h1>
+      <p style="color:var(--mute);margin-bottom:32px">${q?'Результаты по запросу «'+esc(q)+'»:':'Введите запрос в строке поиска, чтобы найти товары.'}</p>
+      ${q&&!list.length?'<div class="empty"><h3 style="font-family:var(--serif);font-size:26px;margin-bottom:8px">Ничего не найдено</h3><p>Попробуйте другой запрос или <a href="#/catalog" style="color:var(--accent);font-weight:600">посмотрите весь каталог</a>.</p></div>':''}
+      ${list.length?`<div class="grid">${list.map(ProductCard).join('')}</div>`:''}
+    </div>
+  `);
+  $('#app').addEventListener('click',cardClickHandler);
+}
+
+/* --- ВХОД --- */
+function PageLogin(){
+  setPage('Вход',`<div class="auth-wrap"><div class="auth-layout">
+    <h2>Вход в кабинет</h2>
+    <p class="lead">Войдите, чтобы отслеживать заказы и оставлять отзывы.</p>
+    <form id="loginForm">
+      <div class="fld"><label>E-mail</label><input type="email" id="l_email" required></div>
+      <div class="fld"><label>Пароль</label><input type="password" id="l_pass" required></div>
+      <button class="btn btn-dark btn-block" type="submit">Войти</button>
+    </form>
+    <div class="m-links"><a href="#/register">Регистрация</a><a href="#/login">Забыли пароль?</a></div>
+  </div></div>`);
+  $('#loginForm').onsubmit=e=>{e.preventDefault();toast('Демо-режим: вход недоступен');}
+}
+
+/* --- РЕГИСТРАЦИЯ --- */
+function PageRegister(){
+  setPage('Регистрация',`<div class="auth-wrap"><div class="auth-layout">
+    <h2>Регистрация</h2>
+    <p class="lead">Создайте аккаунт, чтобы отслеживать заказы и получать специальные предложения.</p>
+    <form id="regForm">
+      <div class="fld"><label>Имя</label><input id="r_name" required></div>
+      <div class="fld"><label>E-mail</label><input type="email" id="r_email" required></div>
+      <div class="fld"><label>Пароль</label><input type="password" id="r_pass" required></div>
+      <button class="btn btn-dark btn-block" type="submit">Создать аккаунт</button>
+    </form>
+    <div class="m-links"><a href="#/login">Уже есть аккаунт? Войти</a></div>
+  </div></div>`);
+  $('#regForm').onsubmit=e=>{e.preventDefault();toast('Демо-режим: регистрация недоступна');}
+}
+
+/* --- ЛИЧНЫЙ КАБИНЕТ --- */
+function PageAccount(){
+  setPage('Личный кабинет',`<div class="hero-mini" style="margin-bottom:40px">
+    <div class="eyebrow">Кабинет</div>
+    <h1>Мой аккаунт</h1>
+    <p>Здесь будут ваши заказы, избранное и сохранённые адреса.</p>
+  </div>
+  <div class="wrap" style="padding-bottom:88px">
+    <div style="max-width:520px;margin:0 auto;text-align:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:48px 28px;box-shadow:var(--shadow)">
+      <svg viewBox="0 0 24 24" style="width:56px;height:56px;stroke:var(--accent);fill:none;stroke-width:1.3;margin:0 auto 20px"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+      <h2 style="font-family:var(--serif);font-size:28px;margin-bottom:10px">Вы не авторизованы</h2>
+      <p style="color:var(--mute);margin-bottom:24px;font-size:14.5px">Войдите в аккаунт, чтобы видеть историю заказов и сохранять избранное.</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a class="btn btn-dark" href="#/login">Войти</a>
+        <a class="btn btn-outline" href="#/register">Регистрация</a>
+      </div>
+    </div>
+  </div>`);
+}
+
+/* --- 404 --- */
+function Page404(){
+  setPage('Страница не найдена',`
+    <div class="wrap" style="padding:100px 28px;text-align:center">
+      <div style="font-family:var(--serif);font-size:120px;line-height:1;color:var(--accent);font-weight:400">404</div>
+      <h1 style="font-family:var(--serif);font-size:34px;margin:20px 0">Страница не найдена</h1>
+      <p style="color:var(--mute);max-width:480px;margin:0 auto 32px">Возможно, страница была перемещена или удалена. Вернитесь на главную или откройте каталог.</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a class="btn btn-dark" href="#/">На главную</a>
+        <a class="btn btn-outline" href="#/catalog">В каталог</a>
+      </div>
+    </div>
+  `);
+}
+
+/* ============== ОБЩИЕ ОБРАБОТЧИКИ КАРТОЧЕК ============== */
+function cardClickHandler(e){
+  const a=e.target.closest('[data-add]');
+  if(a){e.preventDefault();addCart(+a.dataset.add);return}
+  const c=e.target.closest('[data-cmp]');
+  if(c){e.preventDefault();toggleCmp(+c.dataset.cmp);c.classList.toggle('on',cmp.includes(+c.dataset.cmp));return}
+  const q=e.target.closest('[data-qv]');
+  if(q){e.preventDefault();openQV(+q.dataset.qv);return}
+}
+
+/* ============== ЛАЙТБОКС ЛУКОВ ============== */
+function bindLooks(){
+  const lb=$('#lb'),lbi=$('img',lb);let li=0;
+  const showLb=i=>{li=(i+LOOKS.length)%LOOKS.length;lbi.src=img(LOOKS[li]);lb.classList.add('on')};
+  $$('.look').forEach(a=>{
+    a.onclick=ev=>{ev.preventDefault();showLb(+a.dataset.look)}
+  });
+  $('.c',lb).onclick=()=>lb.classList.remove('on');
+  $('.pv',lb).onclick=()=>showLb(li-1);
+  $('.nx',lb).onclick=()=>showLb(li+1);
+  lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('on')});
+}
+
+/* ============== РОУТЕР ============== */
+const routes=[
+  {path:/^\/$/,page:()=>PageHome()},
+  {path:/^\/catalog$/,page:(ctx)=>PageCatalog(ctx)},
+  {path:/^\/product\/(\d+)$/,page:(ctx,id)=>PageProduct(id)},
+  {path:/^\/cart$/,page:()=>PageCart()},
+  {path:/^\/checkout$/,page:()=>PageCheckout()},
+  {path:/^\/looks$/,page:()=>PageLooks()},
+  {path:/^\/about$/,page:()=>PageAbout()},
+  {path:/^\/brands$/,page:()=>PageBrands()},
+  {path:/^\/contacts$/,page:()=>PageContacts()},
+  {path:/^\/delivery$/,page:()=>PageDelivery()},
+  {path:/^\/sale$/,page:()=>PageSale()},
+  {path:/^\/search$/,page:(ctx)=>PageSearch(ctx)},
+  {path:/^\/login$/,page:()=>PageLogin()},
+  {path:/^\/register$/,page:()=>PageRegister()},
+  {path:/^\/account$/,page:()=>PageAccount()},
+];
+function route(){
+  const {path,params}=parseHash();
+  for(const r of routes){
+    const m=path.match(r.path);
+    if(m){r.page({params,args:m.slice(1)},...m.slice(1));return}
+  }
+  Page404();
+}
+window.addEventListener('hashchange',route);
+
+/* ============== ИНИЦИАЛИЗАЦИЯ ============== */
+drawCart();
+drawCmp();
+$$('img[data-src]').forEach(i=>{i.referrerPolicy='no-referrer';i.src=img(i.dataset.src);i.addEventListener('error',hideBroken)});
+const up=$('#toTop');addEventListener('scroll',()=>up.classList.toggle('on',scrollY>700),{passive:true});up.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+if(!location.hash)location.hash='#/';
+route();
+})();
+</script>
+</body>
+</html>
